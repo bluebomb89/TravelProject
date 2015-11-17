@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<!DOCTYPE html> 
 <script type="text/javascript">
 var sch;
 $(function(){
