@@ -31,15 +31,36 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="http://mobirise.com"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/b5246x358-169.jpg"></a>
-                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="http://mobirise.com">MOBIRISE</a></span>
+                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/b5246x358-169.jpg"></a>
+                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.do">MOBIRISE</a></span>
                     </span>
                 </div>
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
                 <div class="mbr-navbar__column mbr-navbar__menu">
                     <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">HOME</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a></li></ul></div>
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="http://mobirise.com">DOWNLOAD</a></li></ul></div>
+                        <div class="mbr-navbar__column">
+                        	<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="main.do">HOME</a>
+                        		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a>
+                        		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a>
+                        		</li>
+         		                <li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
+                        		</li>
+                        	</ul>
+                        </div>
+                        <div class="mbr-navbar__column">
+                        	<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__btn btn btn-default" href="http://mobirise.com">DOWNLOAD</a>
+                        		</li>
+                        	</ul>
+                        </div>
                     </nav>
                 </div>
             </div>
