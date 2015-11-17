@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="../css/main/style.css">
   <link rel="stylesheet" href="../css/main/slidestyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="../css/main/gstyle.css">
+  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
   
   
 </head>
@@ -46,6 +48,8 @@
 </section>
 <!-- 메인 인클루드 -->
 <jsp:include page="${mainview}"></jsp:include>
+<!-- 카테고리 인클루드 -->
+<jsp:include page="${categori}"></jsp:include>
 <!-- 푸터 -->
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-23" style="background-color: rgb(68, 68, 68);">
     
@@ -63,6 +67,10 @@
   <script src="../js/main/bootstrap-carousel-swipe.js"></script>
   <script src="../js/main/jarallax.js"></script>
   <script src="../js/main/script.js"></script>
+  <script src="../js/main/gscript.js"></script>
+  <script src="../js/main/masonry.pkgd.min.js"></script>
+  <script src="../js/main/imagesloaded.pkgd.min.js"></script>
+ 
   
   
 </body>
