@@ -11,11 +11,11 @@
   <meta name="description" content="">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
-  <link rel="stylesheet" href="assets/mobirise/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise-slider/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="../css/main/main.min.css">
+  <link rel="stylesheet" href="../css/main/animate.min.css">
+  <link rel="stylesheet" href="../css/main/style.css">
+  <link rel="stylesheet" href="../css/main/slidestyle.css">
+  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
   
   
 </head>
@@ -27,7 +27,7 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="http://mobirise.com"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="assets/images/b5246x358-169.jpg"></a>
+                        <a class="mbr-brand__logo" href="http://mobirise.com"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/b5246x358-169.jpg"></a>
                         <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="http://mobirise.com">MOBIRISE</a></span>
                     </span>
                 </div>
@@ -50,7 +50,7 @@
                 <li data-app-prevent-settings="" data-target="#slider-64" class="active" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider-64" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#slider-64" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height active" style="background-image: url(assets/images/slide13.jpg);">
+                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height active" style="background-image: url(../backgroundimg/main/slide13.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
@@ -63,7 +63,7 @@
                             </div></div>
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(assets/images/slide24.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/slide24.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
@@ -76,7 +76,7 @@
                             </div></div>
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(assets/images/slide35.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/slide35.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
@@ -104,7 +104,7 @@
     </div>
 </section>
 
-<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="background-image: url(assets/images/bg.jpg);">
+<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="background-image: url(../backgroundimg/main/bg.jpg);">
     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center">
         
         <div class="mbr-box__container mbr-section__container container">
@@ -136,12 +136,12 @@
         </div>
     </div>
 </footer>
-  <script src="assets/jquery/jquery.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
-  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
-  <script src="assets/jarallax/jarallax.js"></script>
-  <script src="assets/mobirise/js/script.js"></script>
+  <script src="../js/main/jquery.min.js"></script>
+  <script src="../js/main/bootstrap.min.js"></script>
+  <script src="../js/main/SmoothScroll.js"></script>
+  <script src="../js/main/bootstrap-carousel-swipe.js"></script>
+  <script src="../js/main/jarallax.js"></script>
+  <script src="../js/main/script.js"></script>
   
   
 </body>
