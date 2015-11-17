@@ -82,6 +82,8 @@
         </div>
     </div>
 </footer>
+ <!-- 지도 -->
+ <jsp:include page="${map }"></jsp:include> 
   <script src="../js/main/jquery.min.js"></script>
   <script src="../js/main/bootstrap.min.js"></script>
   <script src="../js/main/SmoothScroll.js"></script>
