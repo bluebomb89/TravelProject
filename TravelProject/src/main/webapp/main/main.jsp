@@ -17,8 +17,9 @@
   <link rel="stylesheet" href="../css/main/style.css">
   <link rel="stylesheet" href="../css/main/slidestyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
-  <link rel="stylesheet" href="../css/main/search.css" type="text/css">
-  
+  <link rel="stylesheet" href="../css/main/search.css" type="text/css">  
+  <link rel="stylesheet" href="../css/main/gstyle.css">
+  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
   
   
 </head>
@@ -31,15 +32,36 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="http://mobirise.com"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/b5246x358-169.jpg"></a>
-                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="http://mobirise.com">MOBIRISE</a></span>
+                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/b5246x358-169.jpg"></a>
+                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.do">MOBIRISE</a></span>
                     </span>
                 </div>
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
                 <div class="mbr-navbar__column mbr-navbar__menu">
                     <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">HOME</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a></li></ul></div>
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="http://mobirise.com">DOWNLOAD</a></li></ul></div>
+                        <div class="mbr-navbar__column">
+                        	<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="main.do">HOME</a>
+                        		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a>
+                        		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a>
+                        		</li>
+         		                <li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
+                        		</li>
+                        	</ul>
+                        </div>
+                        <div class="mbr-navbar__column">
+                        	<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__btn btn btn-default" href="http://mobirise.com">DOWNLOAD</a>
+                        		</li>
+                        	</ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -48,6 +70,8 @@
 </section>
 <!-- 메인 인클루드 -->
 <jsp:include page="${mainview}"></jsp:include>
+<!-- 카테고리 인클루드 -->
+<jsp:include page="${categori}"></jsp:include>
 <!-- 푸터 -->
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-23" style="background-color: rgb(68, 68, 68);">
     
@@ -59,12 +83,18 @@
         </div>
     </div>
 </footer>
+ <!-- 지도 -->
+ <jsp:include page="${map }"></jsp:include> 
   <script src="../js/main/jquery.min.js"></script>
   <script src="../js/main/bootstrap.min.js"></script>
   <script src="../js/main/SmoothScroll.js"></script>
   <script src="../js/main/bootstrap-carousel-swipe.js"></script>
   <script src="../js/main/jarallax.js"></script>
   <script src="../js/main/script.js"></script>
+  <script src="../js/main/gscript.js"></script>
+  <script src="../js/main/masonry.pkgd.min.js"></script>
+  <script src="../js/main/imagesloaded.pkgd.min.js"></script>
+ 
   
   
 </body>
