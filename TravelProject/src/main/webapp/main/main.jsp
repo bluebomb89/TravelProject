@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="../css/main/style.css">
   <link rel="stylesheet" href="../css/main/slidestyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="../css/main/search.css" type="text/css">
+  
   
   
 </head>
