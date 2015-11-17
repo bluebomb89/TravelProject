@@ -10,6 +10,7 @@ public class MainController {
 	public String mainView(Model model){
 		System.out.println("1");
 		model.addAttribute("mainview", "mainview.jsp");
+		model.addAttribute("categori", "categori.jsp");
 		return "main/main";
 	}
 }
