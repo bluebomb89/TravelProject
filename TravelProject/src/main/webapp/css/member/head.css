@@ -1,0 +1,132 @@
+.form-row {
+  font-size: 0;
+}
+
+.form-column-1, .form-column-2, .form-column-3, .form-column-4, .form-column-5, .form-column-6, .form-column-7, .form-column-8, .form-column-9, .form-column-10, .form-column-11, .form-column-12 {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+
+
+.form-column-5 {
+  width: 41.66667%;
+} */
+/* .form-column-5:first-child {
+  width: 41.66667%;
+  padding-left: 0;
+} */
+
+.form-column-6 {
+  width: 50%;
+}
+.form-column-6:first-child {
+  width: 50%;
+  padding-left: 0;
+}
+
+
+
+.form-row > div label, .form-row > div > a {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+}
+
+.form-row > div > a {
+  color: #186686;
+}
+
+
+
+.custom-form input[type="text"],
+.custom-form input[type="tel"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form input[type="number"],
+.custom-form textarea {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  padding: 13px 15px 14px;
+  border: 1px solid #919191;
+  width: 100%;
+  color: black;
+}
+
+select {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  padding: 13px 15px 14px;
+  border: 1px solid #919191;
+  width: 100%;
+  color: black;
+}
+
+label.required:after {
+  content: "*";
+  color: #d42a1d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 버튼 속 글 색상 */
+.form-row > div > a {
+  color: #186686;
+}
+
+/*버튼 반전*/
+
+button.button:hover, button.button:focus, a.button:hover, a.button:focus {
+  color: white;
+  background-color: #000000;
+}
+
+button.button.large.cta span, a.button.large.cta span {
+  margin: 23px 16px;
+  top: 0;
+}
+
+.form-row > div label, .form-row > div > a {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+}
+
+button.button, a.button {
+  border: 2px solid #186686;
+  font-size: 24px;
+  padding: 20px;
+  color: #186686;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+}
