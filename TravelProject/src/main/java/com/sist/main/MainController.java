@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 	@RequestMapping("main/main.do")
 	public String mainView(Model model){
-		System.out.println("1");
 		model.addAttribute("mainview", "mainview.jsp");
 		model.addAttribute("categori", "categori.jsp");
 		return "main/main";
