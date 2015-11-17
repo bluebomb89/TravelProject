@@ -1,8 +1,13 @@
 package com.member.dao;
 
-public class MemberDAO {
+import java.util.*;
 
-	public static void main(String[] args){
-		System.out.println("¾ÆÁ÷");
-	}
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MemberDAO {
+	@Autowired
+	private MemberMapper mapper;
+	
 }
