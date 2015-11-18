@@ -10,7 +10,6 @@
   <meta name="generator" content="Mobirise v2.4.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
   <link rel="stylesheet" href="../css/main/main.min.css">
   <link rel="stylesheet" href="../css/main/animate.min.css">
@@ -20,10 +19,10 @@
   <link rel="stylesheet" href="../css/main/search.css" type="text/css">  
   <link rel="stylesheet" href="../css/main/gstyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
-  
-  
+  <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 </head>
-<body>
+
+<body id="content">
 <section class="engine"><a rel="nofollow" href="http://mobirise.com">Mobirise website maker</a></section>
 <!-- 메뉴바 -->
 <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-21">
@@ -53,6 +52,9 @@
          		                <li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
                         		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="../member/dddd.do">JOIN</a>
+                        		</li>
                         	</ul>
                         </div>
                         <div class="mbr-navbar__column">
@@ -69,7 +71,9 @@
     </div>
 </section>
 <!-- 메인 인클루드 -->
+<div id="content">
 <jsp:include page="${mainview}"></jsp:include>
+</div>
 <!-- 카테고리 인클루드 -->
 <jsp:include page="${categori}"></jsp:include>
 <!-- 푸터 -->
@@ -84,7 +88,7 @@
     </div>
 </footer>
  <!-- 지도 -->
- <jsp:include page="${map }"></jsp:include> 
+ <jsp:include page="${map }"></jsp:include>
   <script src="../js/main/jquery.min.js"></script>
   <script src="../js/main/bootstrap.min.js"></script>
   <script src="../js/main/SmoothScroll.js"></script>
@@ -94,7 +98,7 @@
   <script src="../js/main/gscript.js"></script>
   <script src="../js/main/masonry.pkgd.min.js"></script>
   <script src="../js/main/imagesloaded.pkgd.min.js"></script>
- 
+  
   
   
 </body>

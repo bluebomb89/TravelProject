@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<!DOCTYPE html> 
 <script type="text/javascript">
 var sch;
 $(function(){
@@ -12,10 +11,8 @@ $(function(){
         });
 });
 </script>
-
 <!-- 슬라이더 메인 -->
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider-64" style="background-color: rgb(255, 255, 255);">
-
 	<div class="searchArea">
 		<div id="searchTxtArea" class="searchTxtArea">오렌지ㅌ</div>
 		<fieldset>
