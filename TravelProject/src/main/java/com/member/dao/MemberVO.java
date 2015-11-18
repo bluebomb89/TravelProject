@@ -11,10 +11,31 @@ public class MemberVO {
 	private int birth_day;
 	private String sex;
 	private String email;
-	private String nation;
+	private String nation_first;
+	private String nation_second;
+	private String nation_third;
 	private String addr;
 	private String phone_cell;
 	private String phone_home;
+	
+	public String getNation_first() {
+		return nation_first;
+	}
+	public void setNation_first(String nation_first) {
+		this.nation_first = nation_first;
+	}
+	public String getNation_second() {
+		return nation_second;
+	}
+	public void setNation_second(String nation_second) {
+		this.nation_second = nation_second;
+	}
+	public String getNation_third() {
+		return nation_third;
+	}
+	public void setNation_third(String nation_third) {
+		this.nation_third = nation_third;
+	}
 	public int getMember_no() {
 		return member_no;
 	}
@@ -74,12 +95,6 @@ public class MemberVO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getNation() {
-		return nation;
-	}
-	public void setNation(String nation) {
-		this.nation = nation;
 	}
 	public String getAddr() {
 		return addr;

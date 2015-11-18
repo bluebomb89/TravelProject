@@ -1,8 +1,19 @@
 package com.member.dao;
 
-public class MemberDAO {
+import java.util.*;
 
-	public static void main(String[] args){
-		System.out.println("아직");
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository("mdao")
+public class MemberDAO {
+	@Autowired
+	private MemberMapper mapper;
+	public void memberInsert(MemberVO vo)
+	{
+		System.out.println("번호 : "+vo.getMember_no());
+		System.out.println("id : "+vo.getMember_id());
+		mapper.memberInsert(vo);
 	}
+	
 }

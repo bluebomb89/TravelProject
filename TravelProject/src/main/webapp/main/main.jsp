@@ -10,7 +10,6 @@
   <meta name="generator" content="Mobirise v2.4.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
   <link rel="stylesheet" href="../css/main/main.min.css">
   <link rel="stylesheet" href="../css/main/animate.min.css">
@@ -20,10 +19,21 @@
   <link rel="stylesheet" href="../css/main/search.css" type="text/css">  
   <link rel="stylesheet" href="../css/main/gstyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
-  
+  <!-- 스크립트 -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../js/main/jquery.slimscroll.min.js"></script>
+  <script src="../js/main/jquery.jquery.easings.min.js"></script>
+  <script src="../js/main/jquery.fullPage.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+	    $('#fullpage').fullpage();
+	});
+  </script>
+ 
   
 </head>
-<body>
+
+<body id="content">
 <section class="engine"><a rel="nofollow" href="http://mobirise.com">Mobirise website maker</a></section>
 <!-- 메뉴바 -->
 <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-21">
@@ -53,6 +63,9 @@
          		                <li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
                         		</li>
+                        		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="../member/dddd.do">JOIN</a>
+                        		</li>
                         	</ul>
                         </div>
                         <div class="mbr-navbar__column">
@@ -68,13 +81,18 @@
         </div>
     </div>
 </section>
+<div id="fullpage">
 <!-- 메인 인클루드 -->
 <jsp:include page="${mainview}"></jsp:include>
+<div class="section">
 <!-- 카테고리 인클루드 -->
 <jsp:include page="${categori}"></jsp:include>
+ <!-- 지도 -->
+ <jsp:include page="${map }"></jsp:include>
+ </div>
+ </div>
 <!-- 푸터 -->
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-23" style="background-color: rgb(68, 68, 68);">
-    
     <div class="mbr-section__container container">
         <div class="mbr-footer mbr-footer--wysiwyg row">
             <div class="col-sm-12">
@@ -83,9 +101,6 @@
         </div>
     </div>
 </footer>
- <!-- 지도 -->
- <jsp:include page="${map }"></jsp:include> 
-  <script src="../js/main/jquery.min.js"></script>
   <script src="../js/main/bootstrap.min.js"></script>
   <script src="../js/main/SmoothScroll.js"></script>
   <script src="../js/main/bootstrap-carousel-swipe.js"></script>
@@ -94,8 +109,5 @@
   <script src="../js/main/gscript.js"></script>
   <script src="../js/main/masonry.pkgd.min.js"></script>
   <script src="../js/main/imagesloaded.pkgd.min.js"></script>
- 
-  
-  
 </body>
 </html>

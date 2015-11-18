@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<!DOCTYPE html> 
 <script type="text/javascript">
 var sch;
 $(function(){
@@ -12,10 +11,9 @@ $(function(){
         });
 });
 </script>
-
 <!-- 슬라이더 메인 -->
+<div class="section">
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider-64" style="background-color: rgb(255, 255, 255);">
-
 	<div class="searchArea">
 		<div id="searchTxtArea" class="searchTxtArea">오렌지ㅌ</div>
 		<fieldset>
@@ -87,7 +85,8 @@ $(function(){
         </div>
     </div>
 </section>
-
+</div>
+<div class="section">
 <section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="background-image: url(../backgroundimg/main/bg.jpg);">
     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center">
         
@@ -109,3 +108,4 @@ $(function(){
         </div>
     </div>
 </section>
+</div>
