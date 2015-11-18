@@ -982,7 +982,7 @@ html {
   position: absolute;
 }
 .mbr-navbar--transparent .mbr-navbar__section {
-  background: white;
+  background: none;
 }
 .mbr-navbar--stuck .mbr-navbar__section,
 .mbr-navbar--relative .mbr-navbar__section {

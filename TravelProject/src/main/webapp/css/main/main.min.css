@@ -1371,7 +1371,7 @@ a.text-danger:focus {
   color: #f74b21;
 }
 .text-white {
-  color: rgb(255, 106, 0);
+  color: #ffffff;
 }
 a.text-white:hover,
 a.text-white:focus {
@@ -3730,8 +3730,8 @@ input[type="button"].btn-block {
 }
 .btn-default.inverse,
 .btn-inverse .btn-default {
-  border-color: rgb(255, 106, 0);
-  color: rgb(255, 106, 0);
+  border-color: #fff;
+  color: #fff;
 }
 .btn-default.inverse:hover,
 .btn-inverse .btn-default:hover,
