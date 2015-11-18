@@ -9,5 +9,11 @@ import org.springframework.stereotype.Repository;
 public class MemberDAO {
 	@Autowired
 	private MemberMapper mapper;
+	public void memberInsert(MemberVO vo)
+	{
+		System.out.println("¹øÈ£ : "+vo.getMember_no());
+		System.out.println("id : "+vo.getMember_id());
+		mapper.memberInsert(vo);
+	}
 	
 }
