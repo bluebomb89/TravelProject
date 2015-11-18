@@ -15,42 +15,49 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="0" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide1-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">홍콩</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="1" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide2-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">파리</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="2" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide3-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">발리</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="3" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide4-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">런던</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="4" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide5-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">서울</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="5" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide6-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">로마</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="6" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide7-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">뉴칼레도니아</span>
                     </a>
-                </div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
                     <a href="#lb-gallery1-3" data-slide-to="7" data-toggle="modal">
                         <img alt="" src="../backgroundimg/main/categoriimg/slide8-small.jpg">
-                        <span class="icon glyphicon glyphicon-zoom-in"></span>
+                        <span class="icon glyphiconn glyphico-zoom-in">마드리드</span>
                     </a>
                 </div>
             </div>
