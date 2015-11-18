@@ -1,0 +1,40 @@
+.searchArea {
+    position: absolute;
+    left: 50%;
+    top: 183px;
+    width: 560px;
+    margin-left: -280px;
+    z-index: 10;
+}
+.searchArea .searchTxtArea {
+    height: 80px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: NanumGB;
+    font-size: 4.6em;
+    line-height: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.searchArea fieldset {
+    position: relative;
+    display: block;
+    height: 46px;
+    border: 3px solid #e3e3e3;
+    background: url(/etc/designs/koreanair-travel/images/main/block55.png) repeat 0 0;
+}
+.searchArea input[type="text"] {
+    float: left;
+    width: 466px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+    line-height: 46px;
+    height: 46px;
+    color: #c2c7cc;
+    font-size: 1.2em;
+}
+.searchArea .searchBtn {
+    float: left;
+}

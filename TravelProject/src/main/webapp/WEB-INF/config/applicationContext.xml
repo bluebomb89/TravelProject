@@ -23,7 +23,7 @@
 	 />
 	 <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource"
 	 		p:driverClassName="oracle.jdbc.driver.OracleDriver"
-	 		p:url="jdbc:oracle:thin:@localhost:1523:ORCL"
+	 		p:url="jdbc:oracle:thin:@localhost:1521:ORCL"
 	 		p:username="scott"
 	 		p:password="tiger"/>
 	 <bean id="ssf" class="org.mybatis.spring.SqlSessionFactoryBean"
