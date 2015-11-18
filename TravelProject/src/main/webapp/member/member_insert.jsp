@@ -8,6 +8,74 @@
 	<link rel="stylesheet" href="../css/member/head.css" type="text/css">
 	<link rel="stylesheet" href="../css/member/registration.css" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic" media="all">
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#btnSubmit').click(function(){
+			
+			var name_kor=$('#name_kor').val();
+			if(name_kor=="")
+			{
+				alert("이름(한글)을 입력해주세요.");
+				$('#name_kor').focus();
+				return;
+			}
+			
+			var name_eng=$('#name_eng').val();
+			if(name_eng=="")
+			{
+				alert("이름(영문)을 입력해주세요.")
+				$('#name_eng').focus();
+				return;
+			}
+			
+			var birth_year=$('#birth_year').val();
+			
+			var birth_month=$('#birth_month').val();
+			
+			var birth_day=$('#birth_day').val();
+			
+			var email=$('#email').val();
+			if(email=="")
+			{
+				alert("Email을 입력해주세요.")
+				$('#email').focus();
+				return;
+			}
+			
+			var phone_cell=$('#phone_cell').val();
+			if(phone_cell=="")
+			{
+				alert("전화번호를 입력해주세요.")
+				$('#phone_cell').focus();
+				return;
+			}
+			
+			var nation_first=$('#nation_first').val();
+			
+			var member_id=$('#member_id').val();
+			if(member_id=="")
+			{
+				alert("ID를 입력해주세요.")
+				$('#member_id').focus();
+				return;
+			}
+			
+			var member_pw=$('#member_pw').val();
+			if(member_pw=="")
+			{
+				alert("비밀번호를 입력해주세요.")
+				$('#member_pw').focus();
+				return;
+			}
+			
+			$('#joinForm').submit();
+		});
+		$('#btnCancel').click(function(){
+			history.back();
+		});
+	});
+	</script>
 	</head>
 <body>
 	
@@ -15,18 +83,17 @@
 	<div class="registrationWrapper page">
 		<h2>회원 가입</h2><p>별도의 언급 없을시 영어로 입력하시길 바랍니다.
 		<br>영문이름은 여권상의 이름과 동일하게 입력하여 주시기 바랍니다.</p>
-		<form id="registration-form" class="custom-form" novalidate="novalidate">    
+		
+		<form id="joinForm" class="custom-form" novalidate="novalidate">    
 		<div class="f-r">        
-		<div class="f-c-6">                        
-		<input type="hidden" name="skypassNumber" value="">                        
-		<input type="hidden" name="" id="" value="">            
+		<div class="f-c-6">                              
            
 		<!-- 한글이름 -->
 		
 		<div class="inner-column-6">                
-			<label for="koreanName" class="title-label required">한글 이름</label>                
+			<label for="name_kor" class="title-label required">한글 이름</label>                
 			<span class="offscreen">필수입력항목 입니다.</span>                
-			<input type="text" name="koreanName" id="koreanName" class="krFirstName required" value="">            
+			<input type="text" name="name_kor" id="name_kor" class="krFirstName required" value="">            
 		</div>
 		
 		<!-- 한글 이름 끝 -->
@@ -34,7 +101,7 @@
 		<!-- 영어 이름 -->
 		            
 			<label for="EngName" class="title-label required" style="padding-top: 20px">영문 이름</label>            
-			<input type="text" name="firstName" id="firstName" value="" class="firstName required" style=" width: 526px;">
+			<input type="text" name="name_eng" id="name_eng" value="" class="firstName required" style=" width: 526px;">
 		
 		<!-- 영어 이름 끝 -->
 		
@@ -44,14 +111,14 @@
 				<label class="title-label" for="dateOfBirthYear">생년월일</label>                
 				                
 				<div class="inner-column-4">                    
-				<input type="text" name="dateOfBirthYear" id="dateOfBirthYear" value="" class="dob dob-year valid" placeholder="YYYY" maxlength="4" title="생년월일-년">                
+				<input type="text" name="birth_year" id="birth_year" value="" class="dob dob-year valid" placeholder="YYYY" maxlength="4" title="생년월일-년">                
 			</div>                
 
 			<div class="inner-column-2">                    
-				<input type="text" name="dateOfBirthMonth" value="" class="dob dob-month valid" placeholder="MM" maxlength="2" title="생년월일-월">                
+				<input type="text" name="birth_month" id="birth_month" value="" class="dob dob-month valid" placeholder="MM" maxlength="2" title="생년월일-월">                
 			</div>                
 				<div class="inner-column-2">                    
-					<input type="text" name="dateOfBirthDay" value="" class="dob dob-day" placeholder="DD" maxlength="2" title="생년월일-일">                
+					<input type="text" name="birth_day" id="birth_day" value="" class="dob dob-day" placeholder="DD" maxlength="2" title="생년월일-일">                
 				</div>            
 			</div>            
 
@@ -61,9 +128,9 @@
 			
 			<div class="vSpace" style="margin-top: 60px">                
 				<label class="title-label" for="genderMale">성별</label>                
-				<input type="radio" name="gender" id="genderMale" value= class="required valid">                
+				<input type="radio" name="sex" id="sex_man" value= class="required valid">                
 				<label for="genderMale">남</label>                
-				<input type="radio" name="gender" id="genderFemale" value="" class="valid">                
+				<input type="radio" name="sex" id="sex_woman" value="" class="valid">                
 				<label id="female-label" for="genderFemale">여</label>           
 			</div>
 			
@@ -92,7 +159,7 @@
 				<!-- 애 건들면 폼 깨짐 -->
 				<div class="chosen-search">
 				<!-- 애 건들면 폼 깨짐 -->
-				<input type="text" title="목록" autocomplete="off" role="combobox" aria-owns="chosen-1541354062501341" aria-describedby="chosen-desc-label-1541354062501341" aria-activedescendant="chosen-0-1541354062501341" aria-readonly="false">
+				<input type="text" title="목록" name="phone_cell" id="phone_cell" autocomplete="off" role="combobox" aria-owns="chosen-1541354062501341" aria-describedby="chosen-desc-label-1541354062501341" aria-activedescendant="chosen-0-1541354062501341" aria-readonly="false">
 				<!-- 애 건들면 폼 깨짐 -->
 				</div>				
 				</div>                
@@ -113,7 +180,7 @@
 					<div class="chosen-container chosen-container-single" style="width: 429px;" id="country_selector_chosen">
 					<!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
 
-					<input type="text" name="lastName" id="lastName" value="" class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636">
+					<input type="text" name="nation_first" id="nation_first" value="" class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636">
 					<div>
 					<b></b>
 					</div></a>
@@ -133,7 +200,7 @@
 								<label class="title-label" for="userId">회원 아이디 
 									<span id="uniqueUserID"></span>
 								</label>                
-								<input type="text" name="userId" id="userId" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245">
+								<input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245">
 								               
 							</div>        
 						</div>        
@@ -145,12 +212,12 @@
 						<div class="f-c-6">            
 							<div>                
 								<label class="title-label" for="password1">비밀번호</label>                
-								<input type="password" name="password1" id="password1" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
+								<input type="member_pw" name="member_pw" id="password1" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
 								<p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p>               
 							</div>
 								<div>
 									<label class="title-label" for="password">비밀번호 확인</label>                
-									<input type="password" name="password" id="password" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164">											    																	<p id="password-validate-label-750164" data-errored-element="password" class="error">비밀번호 확인(필수 정보입니다.)</p>            										    														</div>		
+									<input type="member_pw_ok" name="member_pw_ok" id="password" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164">											    																	<p id="password-validate-label-750164" data-errored-element="password" class="error">비밀번호 확인(필수 정보입니다.)</p>            										    														</div>		
 						</div>
 					</div>
 						
@@ -161,8 +228,8 @@
 						<div class="f-r">        
                    			<div class="f-c-2">            
                    				<div id="error-wrapper"></div>            
-                   					<a href="#" id="registrationSubmit" class="medium button submit">확인</a>            
-                   					<a href="#" id="registrationSubmit" class="medium button submit">취소</a>        
+                   					<input type="button" id="btnSubmit" class="medium button submit" value="확인">         
+                   					<input type="button" id="btnCancel" class="medium button submit" value="취소">
                    				</div>    
                    		</div>
                    			
