@@ -12,8 +12,8 @@ public class JoinController {
 	@Resource(name="mdao")
 	private MemberDAO dao;
 	
-	@RequestMapping("member/dddd.do")
+	@RequestMapping("member/member_insert.do")
 	public String join_form(){
-		return "member/dddd";
+		return "member/member_insert";
 	}
 }
