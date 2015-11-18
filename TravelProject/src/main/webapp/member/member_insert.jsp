@@ -16,8 +16,8 @@
 		<h2>회원 가입</h2><p>별도의 언급 없을시 영어로 입력하시길 바랍니다.
 		<br>영문이름은 여권상의 이름과 동일하게 입력하여 주시기 바랍니다.</p>
 		<form id="registration-form" class="custom-form" novalidate="novalidate">    
-		<div class="form-row">        
-		<div class="form-column-6">                        
+		<div class="f-r">        
+		<div class="f-c-6">                        
 		<input type="hidden" name="skypassNumber" value="">                        
 		<input type="hidden" name="" id="" value="">            
            
@@ -34,7 +34,7 @@
 		<!-- 영어 이름 -->
 		            
 			<label for="EngName" class="title-label required" style="padding-top: 20px">영문 이름</label>            
-			<input type="text" name="firstName" id="firstName" value="" class="firstName required">
+			<input type="text" name="firstName" id="firstName" value="" class="firstName required" style=" width: 526px;">
 		
 		<!-- 영어 이름 끝 -->
 		
@@ -105,7 +105,7 @@
 		</div>            
 		</div>                    
 		</div>        
-				<div class="form-column-6">            
+				<div class="f-c-6">            
 					<div class="vSpace" for="country-selector">                
 					<label class="title-label">관심있는 국가</label>                
 											
@@ -124,8 +124,8 @@
 					<!-- 관심있는국가 끝 -->            
                     
 				<div class="sectionHeader">로그인 정보</div>    
-					<div class="form-row">        
-						<div class="form-column-6">            
+					<div class="f-r">        
+						<div class="f-c-6">            
 							
 							<!-- 아이디 입력창 -->
 							
@@ -142,7 +142,7 @@
 
 							<!-- 비밀번호 입력창 -->
 						
-						<div class="form-column-6">            
+						<div class="f-c-6">            
 							<div>                
 								<label class="title-label" for="password1">비밀번호</label>                
 								<input type="password" name="password1" id="password1" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
@@ -158,8 +158,8 @@
 						
 						<!-- 확인 취소창 -->
 						
-						<div class="form-row">        
-                   			<div class="form-column-2">            
+						<div class="f-r">        
+                   			<div class="f-c-2">            
                    				<div id="error-wrapper"></div>            
                    					<a href="#" id="registrationSubmit" class="medium button submit">확인</a>            
                    					<a href="#" id="registrationSubmit" class="medium button submit">취소</a>        
