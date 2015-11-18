@@ -6820,7 +6820,7 @@ button.close {
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 7%;
   z-index: 15;
   width: 60%;
   margin-left: -30%;
