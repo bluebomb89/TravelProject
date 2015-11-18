@@ -20,14 +20,6 @@
   <link rel="stylesheet" href="../css/main/gstyle.css">
   <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="../js/main/jquery.slimscroll.min.js"></script>
-  <script src="../js/main/jquery.jquery.easings.min.js"></script>
-  <script src="../js/main/jquery.fullPage.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-	    $('#fullpage').fullpage();
-	});
-  </script>
 </head>
 
 <body>
