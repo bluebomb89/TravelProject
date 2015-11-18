@@ -1,0 +1,112 @@
+.registration-page .registrationWrapper {
+  width: 90%;
+  background: #fff;
+  padding: 5% 5% 0 5%;
+  margin: 140px auto;
+  /* start jira pluat-PLUAT-1743*/
+  /* end jira pluat-PLUAT-1743*/
+  padding: 20px;
+}
+
+.registration-page .registrationWrapper .reg-title {
+  text-align: center;
+  padding: 0px;
+}
+
+.registration-page .registrationWrapper .vSpace {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.registration-page .registrationWrapper .checkbox-text {
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+}
+
+.registration-page .registrationWrapper div.chosen-container {
+  width: 200px !important;
+}
+
+.registration-page .registrationWrapper #error-wrapper {
+  color: #d42a1d;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0px 0px 15px 0px;
+  text-align: center;
+}
+
+.registration-page .registrationWrapper input[type='text'].error {
+  border-color: #d42a1d;
+}
+.registration-page .registrationWrapper input[type='radio'].error {
+  background-color: #f00;
+  outline: 1px solid #d42a1d;
+}
+
+.registration-page .registrationWrapper input[type="text"], .registration-page .registrationWrapper input[type="password"], .registration-page .registrationWrapper select, .registration-page .registrationWrapper div.select, .registration-page .registrationWrapper .chosen-container {
+  border: 1px solid #878383;
+}
+.registration-page .registrationWrapper .chosen-container {
+  margin-bottom: 10px;
+}
+
+.registration-page .registrationWrapper .title-label {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.registration-page .registrationWrapper p.sub-label {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.registration-page .registrationWrapper input[type='checkbox'] + label, .registration-page .registrationWrapper input[type='checkbox'] + input[type="hidden"] + label {
+  clear: none;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.registration-page .registrationWrapper .span-3 input[type='radio'] + label {
+  display: inline-block;
+  width: 33%;
+}
+
+.registration-page .registrationWrapper label {
+  clear: both;
+}
+.registration-page .registrationWrapper label p {
+  margin: 6px 0px 6px 0px;
+}
+
+.registration-page .registrationWrapper .form-column-6 {
+  padding-right: 10%;
+}
+
+.registration-page .registrationWrapper .inner-column-6 {
+  float: left;
+  padding-right: 15px;
+  width: 50%;
+}
+.registration-page .registrationWrapper .inner-column-6 + .inner-column-6 {
+  padding-right: 0;
+}
+
+.registration-page .registrationWrapper .inner-column-4 {
+  float: left;
+  padding-right: 15px;
+  width: 40%;
+}
+
+.registration-page .registrationWrapper .inner-column-2 {
+  float: left;
+  padding-right: 15px;
+  width: 30%;
+}
+
+.registration-page .registrationWrapper .sectionHeader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: #eaeae9;
+}
