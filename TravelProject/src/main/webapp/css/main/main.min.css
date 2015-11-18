@@ -1371,7 +1371,7 @@ a.text-danger:focus {
   color: #f74b21;
 }
 .text-white {
-  color: #ffffff;
+  color: rgb(255, 106, 0);
 }
 a.text-white:hover,
 a.text-white:focus {
@@ -3730,8 +3730,8 @@ input[type="button"].btn-block {
 }
 .btn-default.inverse,
 .btn-inverse .btn-default {
-  border-color: #fff;
-  color: #fff;
+  border-color: rgb(255, 106, 0);
+  color: rgb(255, 106, 0);
 }
 .btn-default.inverse:hover,
 .btn-inverse .btn-default:hover,
@@ -6820,7 +6820,7 @@ button.close {
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 7%;
   z-index: 15;
   width: 60%;
   margin-left: -30%;
