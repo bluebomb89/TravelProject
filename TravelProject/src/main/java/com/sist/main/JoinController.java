@@ -1,12 +1,19 @@
 package com.sist.main;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.member.dao.MemberDAO;
+
 @Controller
 public class JoinController {
-	@RequestMapping("member/dddd.do")
+	@Resource(name="mdao")
+	private MemberDAO dao;
+	
+	@RequestMapping("member/member_insert.do")
 	public String join_form(){
-		return "member/dddd";
+		return "member/member_insert";
 	}
 }
