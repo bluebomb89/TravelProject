@@ -20,6 +20,19 @@ $(function(){
 			<input type="text" placeholder="여행지를 입력하세요" id="searchText" title="검색어" class="placeholder">
 			<a href="#" class="searchBtn"><img src="../backgroundimg/main/btn_search.png" alt="검색"></a>
 		</fieldset>
+		<ul class="favorSList">
+		
+				<li><a href="#none" onclick="$KE.search('시드니'); return false;">시드니</a></li>
+				
+				<li><a href="#none" onclick="$KE.search('오클랜드'); return false;">오클랜드</a></li>
+				
+				<li><a href="#none" onclick="$KE.search('방콕'); return false;">방콕</a></li>
+				
+				<li><a href="#none" onclick="$KE.search('괌'); return false;">괌</a></li>
+				
+				<li><a href="#none" onclick="$KE.search('러시아'); return false;">러시아</a></li>
+				
+		</ul>
 	</div>
 	
     <div class="mbr-section__container">
@@ -28,7 +41,7 @@ $(function(){
                 <li data-app-prevent-settings="" data-target="#slider-64" class="active" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider-64" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#slider-64" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height active" style="background-image: url(../backgroundimg/main/visualbg_1.jpg);">
+                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height active" style="background-image: url(../backgroundimg/main/visualbg_3.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
@@ -41,7 +54,7 @@ $(function(){
                             </div></div> -->
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/visualbg_2.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/visualbg_1.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
@@ -54,7 +67,7 @@ $(function(){
                             </div></div> -->
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/visualbg_3.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--full-height" style="background-image: url(../backgroundimg/main/visualbg_2.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding">
                         <div class=" container">
                             
