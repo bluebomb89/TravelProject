@@ -84,7 +84,7 @@
 		<h2>회원 가입</h2><p>별도의 언급 없을시 영어로 입력하시길 바랍니다.
 		<br>영문이름은 여권상의 이름과 동일하게 입력하여 주시기 바랍니다.</p>
 		
-		<form id="joinForm" class="custom-form" novalidate="novalidate">    
+		<form id="joinForm" method=post action="member_insert_ok.do" class="custom-form" novalidate="novalidate">    
 		<div class="f-r">        
 		<div class="f-c-6">                              
            
@@ -212,12 +212,12 @@
 						<div class="f-c-6">            
 							<div>                
 								<label class="title-label" for="password1">비밀번호</label>                
-								<input type="member_pw" name="member_pw" id="password1" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
+								<input type="password" name="member_pw" id="member_pw" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
 								<p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p>               
 							</div>
 								<div>
 									<label class="title-label" for="password">비밀번호 확인</label>                
-									<input type="member_pw_ok" name="member_pw_ok" id="password" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164">											    																	<p id="password-validate-label-750164" data-errored-element="password" class="error">비밀번호 확인(필수 정보입니다.)</p>            										    														</div>		
+									<input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164">											    																	<p id="password-validate-label-750164" data-errored-element="password" class="error">비밀번호 확인(필수 정보입니다.)</p>            										    														</div>		
 						</div>
 					</div>
 						
