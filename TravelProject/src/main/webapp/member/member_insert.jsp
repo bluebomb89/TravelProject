@@ -77,6 +77,22 @@
 			history.back();
 		});
 	});
+	var i = 0;
+    function add_item() {
+       if(i < 2){ 
+          // pre_set 에 있는 내용을 읽어와서 처리..
+          var div = document.createElement('div');
+          div.innerHTML = document.getElementById('pre_set').innerHTML;
+          document.getElementById('field').appendChild(div);
+          i++;
+       }
+    }
+
+    function remove_item(obj) {
+       // obj.parentNode 를 이용하여 삭제
+       document.getElementById('field').removeChild(obj.parentNode);
+       i--;
+    }
 	</script>
 	</head>
 <body>
@@ -168,29 +184,44 @@
 		
 		<!-- 휴대폰 끝 -->		
 				
-				<!-- 관심있는국가 -->
-				
-				<div>                    
-		</div>            
-		</div>                    
-		</div>        
-				<div class="f-c-6">            
-					<div class="vSpace" for="country-selector">                
-					<label class="title-label">관심있는 국가</label>                
-											
-					<!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 --><!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
-					<div class="chosen-container chosen-container-single" style="width: 429px;" id="country_selector_chosen">
-					<!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
-
-					<input type="text" name="nation_first" id="nation_first" value="" class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636">
-					<div>
-					<b></b>
-					</div></a>
-					</div>
-					</div>
-				</div>    
-			</div>		
-					<!-- 관심있는국가 끝 -->            
+				 <!-- 관심있는국가 -->
+            
+            <div>                    
+      </div>            
+      </div>                    
+      </div>        
+            <div class="f-c-6">            
+               <div class="vSpace" for="country-selector">                
+               <label class="title-label">관심있는 국가</label>                
+                                 
+               <!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 --><!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
+               <div class="chosen-container chosen-container-single" style="width: 429px;" id="country_selector_chosen">
+               <!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
+   
+               
+               <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="../images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+               
+                  <!-- 추가 항목생성 -->   
+                     
+                     <div id="pre_set" style="display:none">
+             <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636"><br><img src="../images/delete.gif" onclick="remove_item(this)" style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+             <!-- <input type="button" value="삭제" onclick="remove_item(this)"> -->
+            </div>
+ 
+      <div id="field"></div>
+ 
+      
+      
+                     
+                     
+               <div>
+               <b></b>
+               </div></a>
+               </div>
+               </div>
+            </div>    
+         </div>      
+               <!-- 관심있는국가 끝 -->            
                     
 				<div class="sectionHeader">로그인 정보</div>    
 					<div class="f-r">        
@@ -225,17 +256,17 @@
 						
 						<!-- 비밀번호 입력 끝 -->
 						
-						<!-- 확인 취소창 -->
-						
-						<div class="f-r">        
-                   			<div class="f-c-2">            
-                   				<div id="error-wrapper"></div>            
-                   					<input type="button" id="btnSubmit" class="medium button submit" value="확인">         
-                   					<input type="button" id="btnCancel" class="medium button submit" value="취소">
-                   				</div>    
-                   		</div>
-                   			
-                   		<!-- 확인 취소창 끝-->
+						             <!-- 확인 취소창 -->
+                  
+                  <div class="f-r">        
+                            <div class="f-c-2">            
+                               <div id="error-wrapper"></div>            
+                                  <a href="#" id="registrationSubmit" class="medium button submit">확인</a>            
+                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 66px;left: 100px;">취소</a>        
+                               </div>    
+                         </div>
+                            
+                         <!-- 확인 취소창 끝-->
                    			
                    		</form>
                    	</div>
