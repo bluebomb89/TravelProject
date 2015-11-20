@@ -12,14 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
-  <link rel="stylesheet" href="../css/main/main.min.css">
-  <link rel="stylesheet" href="../css/main/animate.min.css">
-  <link rel="stylesheet" href="../css/main/style.css">
-  <link rel="stylesheet" href="../css/main/slidestyle.css">
-  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
-  <link rel="stylesheet" href="../css/main/search.css" type="text/css">  
-  <link rel="stylesheet" href="../css/main/gstyle.css">
-  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="css/main/main.min.css">
+  <link rel="stylesheet" href="css/main/animate.min.css">
+  <link rel="stylesheet" href="css/main/style.css">
+  <link rel="stylesheet" href="css/main/slidestyle.css">
+  <link rel="stylesheet" href="css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="css/main/search.css" type="text/css">  
+  <link rel="stylesheet" href="css/main/gstyle.css">
+  <link rel="stylesheet" href="css/main/mbr-additional.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
@@ -33,7 +33,7 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/otravel.png"></a>
+                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="backgroundimg/main/logo/otravel.png"></a>
                         <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.do">OTRAVEL</a></span>
                     </span>
                 </div>
@@ -96,15 +96,15 @@
     </div>
 </footer> 
 
-  <script src="../js/main/jquery.min.js"></script>
-  <script src="../js/main/bootstrap.min.js"></script>
-  <script src="../js/main/SmoothScroll.js"></script>
-  <script src="../js/main/bootstrap-carousel-swipe.js"></script>
-  <script src="../js/main/jarallax.js"></script>
-  <script src="../js/main/script.js"></script>
-  <script src="../js/main/gscript.js"></script>
-  <script src="../js/main/masonry.pkgd.min.js"></script>
-  <script src="../js/main/imagesloaded.pkgd.min.js"></script>
+  <script src="js/main/jquery.min.js"></script>
+  <script src="js/main/bootstrap.min.js"></script>
+  <script src="js/main/SmoothScroll.js"></script>
+  <script src="js/main/bootstrap-carousel-swipe.js"></script>
+  <script src="js/main/jarallax.js"></script>
+  <script src="js/main/script.js"></script>
+  <script src="js/main/gscript.js"></script>
+  <script src="js/main/masonry.pkgd.min.js"></script>
+  <script src="js/main/imagesloaded.pkgd.min.js"></script>
   
   
   
