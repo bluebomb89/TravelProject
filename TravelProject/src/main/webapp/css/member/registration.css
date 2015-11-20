@@ -40,10 +40,10 @@
   outline: 1px solid #d42a1d;
 }
 
-.registration-page .registrationWrapper input[type="text"], .registration-page .registrationWrapper input[type="password"], .registration-page .registrationWrapper select, .registration-page .registrationWrapper div.select, .registration-page .registrationWrapper .chosen-container {
+/* .registration-page .registrationWrapper input[type="text"], .registration-page .registrationWrapper input[type="password"], .registration-page .registrationWrapper select, .registration-page .registrationWrapper div.select, .registration-page .registrationWrapper .chosen-container {
   border: 1px solid #878383;
 }
-.registration-page .registrationWrapper .chosen-container {
+ */.registration-page .registrationWrapper .chosen-container {
   margin-bottom: 10px;
 }
 
