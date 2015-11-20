@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="main" template="/main/main.jsp">
+		<put-attribute name="mainview" value="/main/mainview.jsp"></put-attribute>
+		<put-attribute name="categori" value="/main/categori.jsp"></put-attribute>
+		<put-attribute name="map" value="/main/map.jsp"></put-attribute>
+	</definition>
+		<!-- 
+		return "board/list";
+	 -->
+	<!-- 
+		return "index"
+		<definition name="*" extends="main">
+			<put-attribute name="body" value="/WEB-INF/{1}.jsp"/> 
+		</definition>
+		                  1 2 3
+		<definition name="*/*/*" extends="main">
+			<put-attribute name="body" value="/WEB-INF/{1}/{2}/{3}.jsp"/> 
+		</definition>
+	 -->
+	<definition name="*/*" extends="main">
+		<put-attribute name="mainview" value="/{1}/{2}.jsp"/> 
+	</definition>
+</tiles-definitions>

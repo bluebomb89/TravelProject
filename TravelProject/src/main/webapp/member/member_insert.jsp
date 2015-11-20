@@ -5,8 +5,8 @@
 <html lang="ko-kr" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths placeholder formvalidation wf-opensans-n4-active wf-active desktop"><head>
 <title>회원 가입</title>
 	<!-- <link rel="stylesheet" href="../css/vendor.css" type="text/css"> -->
-	<link rel="stylesheet" href="../css/member/head.css" type="text/css">
-	<link rel="stylesheet" href="../css/member/registration.css" type="text/css">
+	<link rel="stylesheet" href="css/member/head.css" type="text/css">
+	<link rel="stylesheet" href="css/member/registration.css" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic" media="all">
 	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript">

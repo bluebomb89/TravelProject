@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
-  <link rel="stylesheet" href="../css/main/main.min.css">
-  <link rel="stylesheet" href="../css/main/animate.min.css">
-  <link rel="stylesheet" href="../css/main/style.css">
-  <link rel="stylesheet" href="../css/main/slidestyle.css">
-  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
-  <link rel="stylesheet" href="../css/main/search.css" type="text/css">  
-  <link rel="stylesheet" href="../css/main/gstyle.css">
-  <link rel="stylesheet" href="../css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="css/main/main.min.css">
+  <link rel="stylesheet" href="css/main/animate.min.css">
+  <link rel="stylesheet" href="css/main/style.css">
+  <link rel="stylesheet" href="css/main/slidestyle.css">
+  <link rel="stylesheet" href="css/main/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="css/main/search.css" type="text/css">  
+  <link rel="stylesheet" href="css/main/gstyle.css">
+  <link rel="stylesheet" href="css/main/mbr-additional.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
@@ -32,7 +33,7 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="../backgroundimg/main/logo/otravel.png"></a>
+                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="backgroundimg/main/logo/otravel.png"></a>
                         <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.do">OTRAVEL</a></span>
                     </span>
                 </div>
@@ -54,7 +55,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
                         		</li>
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="../member/dddd.do">JOIN</a>
+                        			<a class="mbr-buttons__link btn text-white" href="join.do">JOIN</a>
                         		</li>
                         	</ul>
                         </div>
@@ -72,15 +73,15 @@
     </div>
 </section>
 <div id="fullpage">
-<div class="section">
+<div class="section" id="pagepage">
 <!-- 메인 인클루드 -->
-<jsp:include page="${mainview}"></jsp:include>
+<tiles:insertAttribute name="mainview"></tiles:insertAttribute>
 </div>
 <div class="section">
 <!-- 카테고리 인클루드 -->
-<jsp:include page="${categori}"></jsp:include>
+<tiles:insertAttribute name="categori"></tiles:insertAttribute>
  <!-- 지도 -->
- <jsp:include page="${map }"></jsp:include>
+ <tiles:insertAttribute name="map"></tiles:insertAttribute>
  </div>
  </div>
 <!-- 푸터 -->
@@ -95,15 +96,15 @@
     </div>
 </footer> 
 
-  <script src="../js/main/jquery.min.js"></script>
-  <script src="../js/main/bootstrap.min.js"></script>
-  <script src="../js/main/SmoothScroll.js"></script>
-  <script src="../js/main/bootstrap-carousel-swipe.js"></script>
-  <script src="../js/main/jarallax.js"></script>
-  <script src="../js/main/script.js"></script>
-  <script src="../js/main/gscript.js"></script>
-  <script src="../js/main/masonry.pkgd.min.js"></script>
-  <script src="../js/main/imagesloaded.pkgd.min.js"></script>
+  <script src="js/main/jquery.min.js"></script>
+  <script src="js/main/bootstrap.min.js"></script>
+  <script src="js/main/SmoothScroll.js"></script>
+  <script src="js/main/bootstrap-carousel-swipe.js"></script>
+  <script src="js/main/jarallax.js"></script>
+  <script src="js/main/script.js"></script>
+  <script src="js/main/gscript.js"></script>
+  <script src="js/main/masonry.pkgd.min.js"></script>
+  <script src="js/main/imagesloaded.pkgd.min.js"></script>
   
   
   
