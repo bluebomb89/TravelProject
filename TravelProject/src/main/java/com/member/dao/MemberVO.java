@@ -14,7 +14,6 @@ public class MemberVO {
 	private String nation_first;
 /*	private String nation_second;
 	private String nation_third;*/
-	private String addr;
 	private String phone;
 	
 	public String getNation_first() {
@@ -94,12 +93,6 @@ public class MemberVO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getAddr() {
-		return addr;
-	}
-	public void setAddr(String addr) {
-		this.addr = addr;
 	}
 	public String getPhone() {
 		return phone;

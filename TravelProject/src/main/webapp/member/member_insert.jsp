@@ -45,11 +45,11 @@
 				return;
 			}
 			
-			var phone_cell=$('#phone_cell').val();
-			if(phone_cell=="")
+			var phone=$('#phone').val();
+			if(phone=="")
 			{
 				alert("전화번호를 입력해주세요.")
-				$('#phone_cell').focus();
+				$('#phone').focus();
 				return;
 			}
 			
