@@ -111,3 +111,10 @@ $(function(){
     </div>
 </section>
 </div>
+<div class="section">
+<!-- 카테고리 인클루드 -->
+<tiles:insertAttribute name="categori"></tiles:insertAttribute>
+ <!-- 지도 -->
+ <tiles:insertAttribute name="map"></tiles:insertAttribute>
+ </div>
+

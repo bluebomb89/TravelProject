@@ -979,7 +979,7 @@ html {
   position: fixed;
 }
 .mbr-navbar--absolute {
-  position: inherit;
+  position: absolute;
 }
 .mbr-navbar--transparent .mbr-navbar__section {
   background: rgba(255, 106, 0, 0.85);

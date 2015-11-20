@@ -262,7 +262,7 @@
                             <div class="f-c-2">            
                                <div id="error-wrapper"></div>            
                                   <a href="#" id="registrationSubmit" class="medium button submit">확인</a>            
-                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 66px;left: 100px;">취소</a>        
+                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 62px;left: 100px;">취소</a>        
                                </div>    
                          </div>
                             
