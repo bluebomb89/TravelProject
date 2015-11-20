@@ -52,7 +52,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a>
                         		</li>
          		                <li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
+                        			<a class="mbr-buttons__link btn text-white" href="img.do">IMG</a>
                         		</li>
                         		<li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="join.do">JOIN</a>
