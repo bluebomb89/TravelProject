@@ -55,7 +55,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">IMG</a>
                         		</li>
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="../member/dddd.do">JOIN</a>
+                        			<a class="mbr-buttons__link btn text-white" href="join.do">JOIN</a>
                         		</li>
                         	</ul>
                         </div>
@@ -73,7 +73,7 @@
     </div>
 </section>
 <div id="fullpage">
-<div class="section">
+<div class="section" id="pagepage">
 <!-- 메인 인클루드 -->
 <tiles:insertAttribute name="mainview"></tiles:insertAttribute>
 </div>
