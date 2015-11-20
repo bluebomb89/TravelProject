@@ -35,6 +35,8 @@
 			
 			var birth_day=$('#birth_day').val();
 			
+			var sex=$('#sex').val();
+			
 			var email=$('#email').val();
 			if(email=="")
 			{
@@ -128,9 +130,9 @@
 			
 			<div class="vSpace" style="margin-top: 60px">                
 				<label class="title-label" for="genderMale">성별</label>                
-				<input type="radio" name="sex" id="sex_man" value= class="required valid">                
+					<input type="radio" name="sex" id="sex_man" value="남" class="required valid">                
 				<label for="genderMale">남</label>                
-				<input type="radio" name="sex" id="sex_woman" value="" class="valid">                
+					<input type="radio" name="sex" id="sex_woman" value="여" class="valid">                
 				<label id="female-label" for="genderFemale">여</label>           
 			</div>
 			
