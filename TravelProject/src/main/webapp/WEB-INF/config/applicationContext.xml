@@ -18,6 +18,9 @@
 	<util:properties id="db" location="/WEB-INF/config/db.properties"/>
 	<context:annotation-config/>
 	<context:component-scan base-package="com.*"/>
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		p:definitions="/WEB-INF/tiles.xml"
+	/>
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 	 	p:prefix="/"
 	 	p:suffix=".jsp"
@@ -36,4 +39,5 @@
 	 <bean id="membermapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	 		p:mapperInterface="com.member.dao.MemberMapper"
 	 		p:sqlSessionFactory-ref="ssf"/>
+	 
 </beans>
