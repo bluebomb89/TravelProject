@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<html lang="ko-kr" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths placeholder formvalidation wf-opensans-n4-active wf-active desktop"><head>
+<html lang="ko-kr"><head>
 <title>회원 가입</title>
 	<!-- <link rel="stylesheet" href="../css/vendor.css" type="text/css"> -->
 	<link rel="stylesheet" href="css/member/head.css" type="text/css">
@@ -133,10 +133,10 @@
 			</div>                
 
 			<div class="inner-column-2">                    
-				<input type="text" name="birth_month" id="birth_month" value="" class="dob dob-month valid" placeholder="MM" maxlength="2" title="생년월일-월">                
+				<input type="text" name="birth_month" id="birth_month" value="" class="dob dob-month valid" placeholder="MM" maxlength="2" title="생년월일-월" style=" width: 142px;">                
 			</div>                
 				<div class="inner-column-2">                    
-					<input type="text" name="birth_day" id="birth_day" value="" class="dob dob-day" placeholder="DD" maxlength="2" title="생년월일-일">                
+					<input type="text" name="birth_day" id="birth_day" value="" class="dob dob-day" placeholder="DD" maxlength="2" title="생년월일-일" style=" width: 142px;">                
 				</div>            
 			</div>            
 
@@ -148,7 +148,7 @@
 				<label class="title-label" for="genderMale">성별</label>                
 					<input type="radio" name="sex" id="sex_man" value="남" class="required valid">                
 				<label for="genderMale">남</label>                
-					<input type="radio" name="sex" id="sex_woman" value="여" class="valid">                
+					<input type="radio" name="sex" id="sex_woman" value="여" class="valid" >                
 				<label id="female-label" for="genderFemale">여</label>           
 			</div>
 			
@@ -157,7 +157,7 @@
 		<!-- 이메일 에어리어 건들면 틀 깨짐 -->	
 			
 			<label class="title-label" for="email">이메일 주소</label>            
-			<input type="text" id="email" name="email" class=""  aria-describedby="email-validate-label-974352">
+			<input type="text" id="email" name="email" class=""  aria-describedby="email-validate-label-974352" style=" width: 527px;">
 			
 		<!-- 이메일 끝 -->	
 			        
@@ -169,15 +169,15 @@
 				<p class="sub-label">전화번호를 입력하여 주시기 바랍니다. (휴대전화 우선)</p>
 				
 				<!-- 애 건들면 폼 깨짐 -->
-				<div class="chosen-container chosen-container-single" style="width: 439px;" id="representCountryNumberCode_chosen">
+				<div class="c-contner c-contner-single" style="width: 439px;" id="representCountryNumberCode_c">
 				<!-- 애 건들면 폼 깨짐 -->
 
-				<a class="chosen-single chosen-default" tabindex="-1">
+				<a class="c-single c-default" tabindex="-1">
 				
 				<!-- 애 건들면 폼 깨짐 -->
-				<div class="chosen-search">
+				<div class="c-search">
 				<!-- 애 건들면 폼 깨짐 -->
-				<input type="text" title="목록" name="phone_cell" id="phone_cell" autocomplete="off" role="combobox" aria-owns="chosen-1541354062501341" aria-describedby="chosen-desc-label-1541354062501341" aria-activedescendant="chosen-0-1541354062501341" aria-readonly="false">
+				<input type="text" title="목록" name="phone_cell" id="phone_cell" autocomplete="off" role="combobox" aria-owns="c-1541354062501341" aria-describedby="c-desc-label-1541354062501341" aria-activedescendant="c-0-1541354062501341" aria-readonly="false">
 				<!-- 애 건들면 폼 깨짐 -->
 				</div>				
 				</div>                
@@ -195,16 +195,16 @@
                <label class="title-label">관심있는 국가</label>                
                                  
                <!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 --><!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
-               <div class="chosen-container chosen-container-single" style="width: 429px;" id="country_selector_chosen">
+               <div class="c-contner c-contner-single" style="width: 429px;" id="country_selector_c">
                <!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
    
                
-               <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="../images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+               <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
                
                   <!-- 추가 항목생성 -->   
                      
                      <div id="pre_set" style="display:none">
-             <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636"><br><img src="../images/delete.gif" onclick="remove_item(this)" style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+             <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" style="margin-top: 5px;"><br><img src="images/delete.gif" onclick="remove_item(this)" style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
              <!-- <input type="button" value="삭제" onclick="remove_item(this)"> -->
             </div>
  
@@ -214,9 +214,9 @@
       
                      
                      
-               <div>
+               <!-- <div>
                <b></b>
-               </div></a>
+               </div> -->
                </div>
                </div>
             </div>    
@@ -233,7 +233,7 @@
 								<label class="title-label" for="userId">회원 아이디 
 									<span id="uniqueUserID"></span>
 								</label>                
-								<input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245">
+								<input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" style="width: 530px;">
 								               
 							</div>        
 						</div>        
@@ -262,7 +262,7 @@
                             <div class="f-c-2">            
                                <div id="error-wrapper"></div>            
                                   <a href="#" id="registrationSubmit" class="medium button submit">확인</a>            
-                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 62px;left: 100px;">취소</a>        
+                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
                                </div>    
                          </div>
                             
