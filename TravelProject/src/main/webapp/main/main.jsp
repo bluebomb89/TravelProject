@@ -77,6 +77,12 @@
 <!-- 메인 인클루드 -->
 <tiles:insertAttribute name="mainview"></tiles:insertAttribute>
 </div>
+<div class="section">
+<!-- 카테고리 인클루드 -->
+<tiles:insertAttribute name="categori"></tiles:insertAttribute>
+ <!-- 지도 -->
+ <tiles:insertAttribute name="map"></tiles:insertAttribute>
+ </div>
  </div>
 <!-- 푸터 -->
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-23" style="background-color: rgb(68, 68, 68);">

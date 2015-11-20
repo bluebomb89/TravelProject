@@ -18,13 +18,13 @@
 	<util:properties id="db" location="/WEB-INF/config/db.properties"/>
 	<context:annotation-config/>
 	<context:component-scan base-package="com.*"/>
-	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		p:requestContextAttribute="requestContext"
+		p:viewClass="org.springframework.web.servlet.view.tiles2.TilesView"
+	/>
+ 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
 		p:definitions="/WEB-INF/tiles.xml"
 	/>
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-	 	p:prefix="/"
-	 	p:suffix=".jsp"
-	 />
 	 <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource"
 	 		p:driverClassName="#{db['driver']}"
 	 		p:url="#{db['url']}"

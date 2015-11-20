@@ -3,7 +3,7 @@
     "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
     "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-	<definition name="main" template="/main/mainview.jsp">
+	<definition name="main" template="/main/main.jsp">
 		<put-attribute name="mainview" value="/main/mainview.jsp"></put-attribute>
 		<put-attribute name="categori" value="/main/categori.jsp"></put-attribute>
 		<put-attribute name="map" value="/main/map.jsp"></put-attribute>
@@ -22,6 +22,6 @@
 		</definition>
 	 -->
 	<definition name="*/*" extends="main">
-		<put-attribute name="body" value="/{1}/{2}.jsp"/> 
+		<put-attribute name="mainview" value="/{1}/{2}.jsp"/> 
 	</definition>
 </tiles-definitions>
