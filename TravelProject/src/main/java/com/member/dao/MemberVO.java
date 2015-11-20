@@ -12,9 +12,8 @@ public class MemberVO {
 	private String sex;
 	private String email;
 	private String nation_first;
-/*	private String nation_second;
-	private String nation_third;*/
-	private String addr;
+	private String nation_second;
+	private String nation_third;
 	private String phone;
 	
 	public String getNation_first() {
@@ -23,7 +22,7 @@ public class MemberVO {
 	public void setNation_first(String nation_first) {
 		this.nation_first = nation_first;
 	}
-	/*public String getNation_second() {
+	public String getNation_second() {
 		return nation_second;
 	}
 	public void setNation_second(String nation_second) {
@@ -34,7 +33,7 @@ public class MemberVO {
 	}
 	public void setNation_third(String nation_third) {
 		this.nation_third = nation_third;
-	}*/
+	}
 	public int getMember_no() {
 		return member_no;
 	}
@@ -94,12 +93,6 @@ public class MemberVO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getAddr() {
-		return addr;
-	}
-	public void setAddr(String addr) {
-		this.addr = addr;
 	}
 	public String getPhone() {
 		return phone;

@@ -21,7 +21,6 @@ public class MemberDAO {
       System.out.println("성별 : "+vo.getSex());
       System.out.println("이메일 : "+vo.getEmail());
       System.out.println("선호국가 : "+vo.getNation_first());
-      System.out.println("주소 : "+vo.getAddr());
       System.out.println("전화번호 : "+vo.getPhone());
       mapper.memberInsert(vo);
    }
