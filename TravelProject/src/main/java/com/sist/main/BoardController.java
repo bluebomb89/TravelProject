@@ -9,8 +9,12 @@ import com.member.dao.*;
 
 @Controller
 public class BoardController {
-	@RequestMapping("img.do")
+	@RequestMapping("img.tvl")
 	public String member_insert(){
 		return "board/board";
+	}
+	@RequestMapping("travel_insert")
+	public String travel_insert(){
+		return "board/board_insert";
 	}
 }

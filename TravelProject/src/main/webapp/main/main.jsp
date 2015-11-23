@@ -33,8 +33,8 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <a class="mbr-brand__logo" href="main.do"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="backgroundimg/main/logo/otravel.png"></a>
-                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.do">OTRAVEL</a></span>
+                        <a class="mbr-brand__logo" href="main.tvl"><img class="mbr-navbar__brand-img mbr-brand__img" alt="" src="backgroundimg/main/logo/otravel.png"></a>
+                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="main.tvl">OTRAVEL</a></span>
                     </span>
                 </div>
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
@@ -43,7 +43,7 @@
                         <div class="mbr-navbar__column">
                         	<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="main.do">HOME</a>
+                        			<a class="mbr-buttons__link btn text-white" href="main.tvl">HOME</a>
                         		</li>
                         		<li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a>
@@ -52,10 +52,13 @@
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a>
                         		</li>
          		                <li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="img.do">IMG</a>
+                        			<a class="mbr-buttons__link btn text-white" href="img.tvl">IMG</a>
                         		</li>
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="join.do">JOIN</a>
+                        			<a class="mbr-buttons__link btn text-white" href="join.tvl">JOIN</a>
+                        		</li>
+               		       		<li class="mbr-navbar__item">
+                        			<a class="mbr-buttons__link btn text-white" href="travel_insert.tvl">Board_Insert</a>
                         		</li>
                         	</ul>
                         </div>
