@@ -12,14 +12,14 @@ public class JoinController {
 	@Resource(name="mdao")
 	private MemberDAO dao;
 	
-	@RequestMapping("join.do")
+	@RequestMapping("join.tvl")
 	public String member_insert(){
 		return "member/member_insert";
 	}
-	@RequestMapping("member_insert_ok.do")
+	@RequestMapping("member/member_insert_ok.tvl")
 	public String member_insert_ok(MemberVO vo)
 	{
 		dao.memberInsert(vo);
-		return "redirect:/main/main.do";
+		return "redirect:/main/main.tvl";
 	}
 }

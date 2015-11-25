@@ -18,6 +18,8 @@ public interface MemberMapper {
 			+ "#{sex, jdbcType=VARCHAR},"
 			+ "#{email, jdbcType=VARCHAR},"
 			+ "#{nation_first, jdbcType=VARCHAR},"
+			+ "#{nation_second, jdbcType=VARCHAR},"
+			+ "#{nation_third, jdbcType=VARCHAR},"
 			+ "#{phone, jdbcType=VARCHAR})")
 	public void memberInsert(MemberVO vo);
 }
