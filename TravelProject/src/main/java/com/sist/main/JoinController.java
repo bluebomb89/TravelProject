@@ -16,7 +16,7 @@ public class JoinController {
 	public String member_insert(){
 		return "member/member_insert";
 	}
-	@RequestMapping("member/member_insert_ok.do")
+	@RequestMapping("member_insert_ok.do")
 	public String member_insert_ok(MemberVO vo)
 	{
 		dao.memberInsert(vo);
