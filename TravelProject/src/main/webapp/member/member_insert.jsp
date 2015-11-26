@@ -8,6 +8,64 @@
    <link rel="stylesheet" href="css/member/head.css" type="text/css">
    <link rel="stylesheet" href="css/member/registration.css" type="text/css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic" media="all">
+   
+   <!-- 회원가입 비밀번호 중복 확인 -->
+   
+
+		
+<style type="text/css">
+	span{
+  		font-size: 15px;
+		}
+	#checkMsg{
+  				font-size: 12px;
+			 }
+	#checkPwd{
+  				color : red;
+  				font-size: 12px;
+			 }
+</style>
+
+
+	
+
+		<script type="text/javascript" src="httpRequest.js"></script>
+		<script type="text/javascript">
+	 var checkFirst = false;
+	 var lastKeyword = '';
+	 var loopSendKeyword = false;
+	 
+	 /* function checkId() {
+	  if (checkFirst == false) {
+	   //0.5초 후에 sendKeyword()함수 실행
+	   setTimeout("sendId();", 500);
+	   loopSendKeyword = true;
+	  }
+	  checkFirst = true;
+	 } */
+ 
+ function checkPwd(){
+  var f1 = document.forms[0];
+  var pw1 = f1.pwd.value;
+  var pw2 = f1.member_pw_ok.value;
+
+
+  if(pw1!=pw2){
+   document.getElementById('checkPwd').style.color = "red";
+   document.getElementById('checkPwd').innerHTML = "동일한 암호를 입력하세요."; 
+  }else{
+   document.getElementById('checkPwd').style.color = "blue";
+   document.getElementById('checkPwd').innerHTML = "암호가 확인 되었습니다."; 
+   
+  }
+  
+ }
+
+</script>
+		
+   
+   <!-- 회원가입 비밀번호 중복 확인  끝 -->
+   
    <script type="text/javascript">
    $(function(){
       $('#btnSubmit').click(function(){
@@ -92,6 +150,8 @@
        document.getElementById('field').removeChild(obj.parentNode);
        i--;
     }
+    
+    
    </script>
    </head>
 <body>
@@ -203,7 +263,7 @@
                   <!-- 추가 항목생성 -->   
                      
                      <div id="pre_set" style="display:none">
-             <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" style="margin-top: 5px;"><br><img src="images/delete.gif" onclick="remove_item(this)" style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+             <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" style="margin-top: 2px;"><br><img src="images/delete.gif" onclick="remove_item(this)" style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px; style="margin-top: 2px;">
              <!-- <input type="button" value="삭제" onclick="remove_item(this)"> -->
             </div>
  
@@ -244,12 +304,22 @@
                   <div class="f-c-6">            
                      <div>                
                         <label class="title-label" for="password1">비밀번호</label>                
-                        <input type="password" name="member_pw" id="member_pw" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
+                        
+                        <!-- <input type="password" name="member_pw" id="member_pw" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732"> -->
+                        <input type="password" name="pwd" id="pwd" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
                         <p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p>               
                      </div>
                         <div>
                            <label class="title-label" for="password">비밀번호 확인</label>                
-                           <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164">                                                                                        <p id="password-validate-label-750164" data-errored-element="password" class="error">비밀번호 확인(필수 정보입니다.)</p>                                                                                        </div>      
+                           <input type="password" name="member_pw_ok" onkeyup="checkPwd()">
+                          	 <div id="checkPwd"></div>
+                           
+                          <!--  <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164"> -->                                                                                        
+                           
+                                                          
+                           	</div>      
+                  		   
+    							 
                   </div>
                </div>
                   
