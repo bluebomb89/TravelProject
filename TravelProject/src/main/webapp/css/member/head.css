@@ -1,8 +1,32 @@
-.form-row {
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} */
+
+
+h2{
+    
+    font-family: sans-serif;
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.f-r {
   font-size: 0;
 }
 
-.form-column-1, .form-column-2, .form-column-3, .form-column-4, .form-column-5, .form-column-6, .form-column-7, .form-column-8, .form-column-9, .form-column-10, .form-column-11, .form-column-12 {
+.f-c-1, .f-c-2, .f-c-3, .f-c-4, .f-c-5, .f-c-6, .f-c-7, .f-c-8, .f-c-9, .f-c-10, .f-c-11, .f-c-12 {
   display: inline-block;
   margin-bottom: 15px;
   padding-left: 10px;
@@ -11,25 +35,25 @@
 
 
 
-.form-column-5 {
+.f-c-5 {
   width: 41.66667%;
 } */
-/* .form-column-5:first-child {
+/* .f-c-5:first-child {
   width: 41.66667%;
   padding-left: 0;
 } */
 
-.form-column-6 {
+.f-c-6 {
   width: 50%;
 }
-.form-column-6:first-child {
+.f-c-6:first-child {
   width: 50%;
   padding-left: 0;
 }
 
 
 
-.form-row > div label, .form-row > div > a {
+.f-r > div label, .f-r > div > a {
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 4px;
@@ -37,8 +61,8 @@
   text-align: left;
 }
 
-.form-row > div > a {
-  color: #186686;
+.f-r > div > a {
+  color: #000000;
 }
 
 
@@ -80,8 +104,8 @@ label.required:after {
 }
 
 /* 버튼 속 글 색상 */
-.form-row > div > a {
-  color: #186686;
+.f-r > div > a {
+  color: #000000;
 }
 
 /*버튼 반전*/
@@ -96,7 +120,7 @@ button.button.large.cta span, a.button.large.cta span {
   top: 0;
 }
 
-.form-row > div label, .form-row > div > a {
+.f-r > div label, .f-r > div > a {
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 4px;
@@ -105,7 +129,7 @@ button.button.large.cta span, a.button.large.cta span {
 }
 
 button.button, a.button {
-  border: 2px solid #186686;
+  border: 2px solid #000000;
   font-size: 24px;
   padding: 20px;
   color: #186686;

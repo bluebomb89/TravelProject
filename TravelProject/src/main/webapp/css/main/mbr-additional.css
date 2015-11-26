@@ -38,7 +38,8 @@
   background: #e25041;
 }
 #menu-21 .mbr-brand__name {
-  font-size: 16px;
+  font-size: 30px;
+  color: #fff;
 }
 #menu-21.mbr-navbar--stuck .mbr-navbar__section {
   background: #e25041;

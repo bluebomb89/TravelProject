@@ -1,10 +1,20 @@
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} */
+
+
 .registration-page .registrationWrapper {
   width: 90%;
   background: #fff;
   padding: 5% 5% 0 5%;
   margin: 140px auto;
-  /* start jira pluat-PLUAT-1743*/
-  /* end jira pluat-PLUAT-1743*/
   padding: 20px;
 }
 
@@ -22,7 +32,7 @@
   font-size: 0.75rem !important;
 }
 
-.registration-page .registrationWrapper div.chosen-container {
+.registration-page .registrationWrapper div.c-contner {
   width: 200px !important;
 }
 
@@ -42,10 +52,10 @@
   outline: 1px solid #d42a1d;
 }
 
-.registration-page .registrationWrapper input[type="text"], .registration-page .registrationWrapper input[type="password"], .registration-page .registrationWrapper select, .registration-page .registrationWrapper div.select, .registration-page .registrationWrapper .chosen-container {
+/* .registration-page .registrationWrapper input[type="text"], .registration-page .registrationWrapper input[type="password"], .registration-page .registrationWrapper select, .registration-page .registrationWrapper div.select, .registration-page .registrationWrapper .c-contner {
   border: 1px solid #878383;
 }
-.registration-page .registrationWrapper .chosen-container {
+ */.registration-page .registrationWrapper .c-contner {
   margin-bottom: 10px;
 }
 

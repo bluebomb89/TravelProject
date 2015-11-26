@@ -6,12 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
-   @RequestMapping("main/main.do")
+   @RequestMapping("main.tvl")
    public String mainView(Model model){
-      model.addAttribute("mainview", "mainview.jsp");
-      model.addAttribute("categori", "categori.jsp");
-      model.addAttribute("map", "map.jsp");
-      return "main/main";
+      return "main";
    }
 }
 
