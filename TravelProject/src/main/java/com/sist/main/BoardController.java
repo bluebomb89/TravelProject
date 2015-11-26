@@ -13,7 +13,7 @@ public class BoardController {
 	public String member_insert(){
 		return "board/board";
 	}
-	@RequestMapping("travel_insert")
+	@RequestMapping("travel_insert.tvl")
 	public String travel_insert(){
 		return "board/board_insert";
 	}

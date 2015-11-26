@@ -39,5 +39,4 @@
 	 <bean id="membermapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	 		p:mapperInterface="com.member.dao.MemberMapper"
 	 		p:sqlSessionFactory-ref="ssf"/>
-	 
 </beans>
