@@ -30,6 +30,6 @@ public class JoinController {
 		String idc=dao.member_id_check(id);
 		model.addAttribute("id", idc);
 //		return "redirect:/member/member_id_check";
-		return "member/member_id_check";
+		return "member/member_ajax/member_id_check";
 	}
 }

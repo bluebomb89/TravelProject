@@ -185,7 +185,8 @@
 	   		if(httpRequest.status==200){
 	   			var res=httpRequest.responseText;
 	   			//alert(res);
-	   			$('#member_id_check').text(res);
+	   			$('#member_id_check').html(res);
+	   			//$('#member_id_check').text(res);
 	   			// 보여주면서 div에 값저장
 	   			//alert(res);
 	   		}		
@@ -331,8 +332,8 @@
                         <label class="title-label" for="userId">회원 아이디 
                            <span id="uniqueUserID"></span>
                         </label>                
-                        <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" style="width: 530px;">
-                        <label id="member_id_check"></label>
+                        <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" autocomplete="off" style="width: 530px;">
+                        <label style="text-align: left;"><ul id="member_id_check" style="list-style:none;padding-left:0px;"></ul></label>
                                        
                      </div>        
                   </div>        
