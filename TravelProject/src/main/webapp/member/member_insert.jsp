@@ -153,6 +153,45 @@
     
     
    </script>
+   <script type="text/javascript">
+   var httpRequest=null;
+   function createHttpRequest(){
+   	if(window.ActiveXObject){ //IE 6.0 이상
+   		return new ActiveXObject("Msxml2.XMLHTTP");
+   		//Microsoft.XMLHTTP 6.0이하일때
+   	}else if(window.XMLHttpRequest){ // 크롬 , ff
+   		return new XMLHttpRequest();
+   	}else{ // 호환이 안될때
+   		return null; //지원하지 않는 브라우저
+   	}
+   }
+   function sendMessage(method,param,url,callback){
+   	// 서버 연결 DWR,DOJO
+   	httpRequest=createHttpRequest();
+   	httpRequest.open(method,url+param,true);
+   	// true: 비동기 false:동기
+   	httpRequest.onreadystatechange=callback;
+   	httpRequest.send(null);
+   }
+   $(function(){
+		  $('#member_id').keyup(function(){
+			  var id=$('#member_id').val();
+			  param="?id="+id;
+			  sendMessage('GET', param, "member_id_check.tvl", idcheck_result); 
+		  })
+	   });
+   function idcheck_result(){
+	   	if(httpRequest.readyState==4){
+	   		if(httpRequest.status==200){
+	   			var res=httpRequest.responseText;
+	   			//alert(res);
+	   			$('#member_id_check').text(res);
+	   			// 보여주면서 div에 값저장
+	   			//alert(res);
+	   		}		
+	   	}
+	   }
+   </script>
    </head>
 <body>
    
@@ -293,6 +332,7 @@
                            <span id="uniqueUserID"></span>
                         </label>                
                         <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" style="width: 530px;">
+                        <label id="member_id_check"></label>
                                        
                      </div>        
                   </div>        
@@ -333,7 +373,8 @@
                                   <input type="button"  id="btnSubmit" class="medium button submit" accesskey="s" value="1234">
                                   
                                   <!-- <a href="#" id="registrationSubmit" class="medium button submit">확인</a> -->            
-                                  <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
+                                  <!-- <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a> -->
+                                  <a href="member_id_check.tvl?id=admin" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
                                </div>    
                          </div>
                             

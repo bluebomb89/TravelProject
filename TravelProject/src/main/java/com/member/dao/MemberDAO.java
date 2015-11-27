@@ -24,5 +24,9 @@ public class MemberDAO {
       System.out.println("전화번호 : "+vo.getPhone());
       mapper.memberInsert(vo);
    }
+   public String member_id_check(String id) throws Exception{
+	   System.out.println(id);
+	   return mapper.member_id_check(id);
+   }
    
 }

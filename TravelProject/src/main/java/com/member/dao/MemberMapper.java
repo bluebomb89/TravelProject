@@ -1,6 +1,7 @@
 package com.member.dao;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 
 public interface MemberMapper {
@@ -22,4 +23,7 @@ public interface MemberMapper {
 			+ "#{nation_third, jdbcType=VARCHAR},"
 			+ "#{phone, jdbcType=VARCHAR})")
 	public void memberInsert(MemberVO vo);
+	@Select("select * from yoseksa_member where member_id=#{id}")
+	public String member_id_check(String id);
+	
 }
