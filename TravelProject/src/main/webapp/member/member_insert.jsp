@@ -35,14 +35,14 @@
 	 var lastKeyword = '';
 	 var loopSendKeyword = false;
 	 
-	 /* function checkId() {
+	  function checkId() {
 	  if (checkFirst == false) {
 	   //0.5초 후에 sendKeyword()함수 실행
 	   setTimeout("sendId();", 500);
 	   loopSendKeyword = true;
 	  }
 	  checkFirst = true;
-	 } */
+	 } 
  
  function checkPwd(){
   var f1 = document.forms[0];
@@ -60,6 +60,47 @@
   }
   
  }
+ function sendId() {
+	  if (loopSendKeyword == false) return;
+	  
+	  var keyword = document.search.u_id.value;
+	  if (keyword == '') {
+	   lastKeyword = '';
+	   document.getElementById('checkMsg').style.color = "black";
+	   document.getElementById('checkMsg').innerHTML = "아이디를 입력하세요.";
+	  } else if (keyword != lastKeyword) {
+	   lastKeyword = keyword;
+	   
+	   if (keyword != '') {
+	    var params = "id="+encodeURIComponent(keyword);
+	    sendRequest("id_check.jsp", params, displayResult, 'POST');
+	   } else {
+	   }
+	  }
+	  setTimeout("sendId();", 500);
+	 }
+	 
+	 
+	 function displayResult() {
+	  if (httpRequest.readyState == 4) {
+	   if (httpRequest.status == 200) {
+	    var resultText = httpRequest.responseText;
+	    var listView = document.getElementById('checkMsg');
+	    if(resultText==0){
+	     listView.innerHTML = "사용 할 수 있는 ID 입니다";
+	     listView.style.color = "blue";
+	    }else{
+	     listView.innerHTML = "이미 등록된 ID 입니다";
+	     listView.style.color = "red";
+	    }
+	   } else {
+	    alert("에러 발생: "+httpRequest.status);
+	   }
+	  }
+	 }
+
+
+
 
 </script>
 		
@@ -169,7 +210,7 @@
       
       <div class="inner-column-6">                
          <label for="name" class="title-label required">한글 이름</label>                
-         <span class="offscreen">필수입력항목 입니다.</span>                
+                         
          <input type="text" name="name_kor" id="name_kor" class="krFirstName required" value="">            
       </div>
       
@@ -283,7 +324,7 @@
                <!-- 관심있는국가 끝 -->            
                     
             <div class="sectionHeader">로그인 정보</div>    
-               <div class="f-r">        
+               <div class="f-r" style="height: 220px;">        
                   <div class="f-c-6">            
                      
                      <!-- 아이디 입력창 -->
@@ -293,6 +334,8 @@
                            <span id="uniqueUserID"></span>
                         </label>                
                         <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" style="width: 530px;">
+                         <!-- <input type="text" name="u_id" id="u_id" onkeydown="checkId()" /> -->  
+        					<div id="checkMsg">아이디를 입력하세요.</div>
                                        
                      </div>        
                   </div>        
@@ -312,7 +355,7 @@
                         <div>
                            <label class="title-label" for="password">비밀번호 확인</label>                
                            <input type="password" name="member_pw_ok" onkeyup="checkPwd()">
-                          	 <div id="checkPwd"></div>
+                          	 <div id="checkPwd" style="margin-top: 8px;"></div>
                            
                           <!--  <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164"> -->                                                                                        
                            
@@ -330,7 +373,7 @@
                   <div class="f-r">        
                             <div class="f-c-2">            
                                <div id="error-wrapper"></div>            
-                                  <input type="button"  id="btnSubmit" class="medium button submit" accesskey="s" value="1234">
+                                  <input type="button"  id="btnSubmit" class="medium button submit" accesskey="s" value="가입">
                                   
                                   <!-- <a href="#" id="registrationSubmit" class="medium button submit">확인</a> -->            
                                   <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
