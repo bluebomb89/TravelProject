@@ -173,6 +173,10 @@
       httpRequest.onreadystatechange=callback;
       httpRequest.send(null);
    }
+ 
+   
+   //회원아이디 중복 체크 시작
+   
    $(function(){
         $('#member_id').keyup(function(){
            var id=$('#member_id').val();
@@ -192,7 +196,14 @@
             }      
          }
       }
+   
+   //회원중복 끝
+   
    </script>
+   
+   
+   
+   
    </head>
 <body>
    
@@ -209,7 +220,7 @@
       
       <div class="inner-column-6">                
          <label for="name" class="title-label required">한글 이름</label>                
-         <span class="offscreen">필수입력항목 입니다.</span>                
+                         
          <input type="text" name="name_kor" id="name_kor" class="krFirstName required" value="">            
       </div>
       
@@ -333,7 +344,11 @@
                            <span id="uniqueUserID"></span>
                         </label>                
                         <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" autocomplete="off" style="width: 530px;">
-                        <label style="text-align: left;"><ul id="member_id_check" style="list-style:none;padding-left:0px;"></ul></label>
+                        <label style="text-align: left;">
+                        	<ul id="member_id_check" style="list-style:none;padding-left:0px;margin-top: 7px;">
+                        		
+                        	</ul>
+                        </label>
                                        
                      </div>        
                   </div>        
@@ -353,7 +368,7 @@
                         <div>
                            <label class="title-label" for="password">비밀번호 확인</label>                
                            <input type="password" name="member_pw_ok" onkeyup="checkPwd()">
-                              <div id="checkPwd"></div>
+                              <div id="checkPwd" style="color: red;margin-top: 6px;"></div>
                            
                           <!--  <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164"> -->                                                                                        
                            
