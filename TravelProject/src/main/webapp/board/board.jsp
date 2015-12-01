@@ -167,7 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="btn-group" role="group">
                
 
-               <a href="travel_enroll.do"><button type="button"
+               <a href="travel_insert.tvl"><button type="button"
                      class="btn btn-default" onclick="" style="margin-right: 6px;">
                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                   </button></a>
@@ -326,17 +326,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       
       <div class="travel_btn_group" style="margin: 0 auto;" align="center">
 			<div class="travel_btn" role="group" aria-label="First group">
-				<a href="travel.do?page=${curpage>1?curpage-1:curpage }">
+				<a href="travel.tvl?page=${curpage>1?curpage-1:curpage }">
 				<button type="button" class="btn btn-default" onclick="btnDown()">＜</button>
 				</a>
 				<c:forEach var="i" begin="1" end="${totalpage }">
 				<c:choose>
              	<c:when test="${curpage<=totalpage }">
-				<a href="travel.do?page=${i }"><button type="button" class="btn btn-default" id="btn1">${i }</button></a>
+				<a href="travel.tvl?page=${i }"><button type="button" class="btn btn-default" id="btn1">${i }</button></a>
 				</c:when>
 				</c:choose>
 				</c:forEach>
-				<a href="travel.do?page=${curpage<totalpage?curpage+1:curpage }">
+				<a href="travel.tvl?page=${curpage<totalpage?curpage+1:curpage }">
 				<button type="button" class="btn btn-default" onclick="btnUp()">＞</button>
 				</a>
 			</div>

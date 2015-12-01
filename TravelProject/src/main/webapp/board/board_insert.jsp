@@ -92,9 +92,11 @@ function ImgUproad(step){
 </head>
 <body >
 <div id="travel_center" class="">
+    <form method=post action="insert_ok.tvl">
     <div class="">
 	    <div class="">
 	        <div class="cont_box">
+	  				      
       	      	<p class="travel_subject" style="margin-top: 50px">여행 제목</p>
 		      	<input type="text" name="" id="" class="subject_txt" placeholder="예) 소고기 미역국 끓이기" style="width:610px;position: absolute;">	
 	            <input type="file" class="travel_img_upload" style="margin-left: 800px;">
@@ -146,9 +148,10 @@ function ImgUproad(step){
     </div><!--/cont_box-->
     
     <div id="trv_subcan">
-    	<button type="button" id="" class="">저장</button>
-	    <button type="button" id="" class="">취소</button>
+    	<button type="submit" id="" class="">저장</button>
+	    <button type="button" id="" class="" onclick="javascript:history.back()">취소</button>
     </div> 
+    </form>
   </div><!--/regi_center-->
 </body>
 </html>

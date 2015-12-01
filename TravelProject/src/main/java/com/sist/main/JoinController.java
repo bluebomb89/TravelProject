@@ -1,5 +1,7 @@
 package com.sist.main;
 
+import java.lang.reflect.Member;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -17,12 +19,16 @@ public class JoinController {
 	
 	@RequestMapping("join.tvl")
 	public String member_insert(){
+		
 		return "member/member_insert";
 	}
 	@RequestMapping("member_insert_ok.tvl")
 	public String member_insert_ok(MemberVO vo,Model model)
 	{
+		System.out.println();
+		
 		dao.memberInsert(vo);
+		
 		return "member/member_insert_ok";
 	}
 	@RequestMapping("member_id_check.tvl")

@@ -16,13 +16,16 @@
 <style type="text/css">
    span{
         font-size: 15px;
+        
       }
    #checkMsg{
               font-size: 12px;
+              font-weight: bold;
           }
    #checkPwd{
               color : red;
-              font-size: 12px;
+              font-size: 15px;
+              font-weight: bold;
           }
 </style>
 
@@ -46,7 +49,7 @@
  
  function checkPwd(){
   var f1 = document.forms[0];
-  var pw1 = f1.pwd.value;
+  var pw1 = f1.member_pw.value;
   var pw2 = f1.member_pw_ok.value;
 
 
@@ -71,15 +74,17 @@
       $('#btnSubmit').click(function(){
          
            var name_kor=$('#name_kor').val();
-         if(name_kor=="")
+  
+           if(name_kor=="")
          {
             alert("이름(한글)을 입력해주세요.");
             $('#name_kor').focus();
             return;
          }
          
-         var name_eng=$('#name_eng').val();
-         if(name_eng=="")
+           var name_eng=$('#name_eng').val();
+        
+           if(name_eng=="")
          {
             alert("이름(영문)을 입력해주세요.")
             $('#name_eng').focus();
@@ -256,9 +261,9 @@
          
          <div class="vSpace" style="margin-top: 60px">                
             <label class="title-label" for="genderMale">성별</label>                
-               <input type="radio" name="sex" id="sex_man" value="남" class="required valid">                
+               <input type="radio" name="sex" id="sex_man" value="남자" class="required valid">                
             <label for="genderMale">남</label>                
-               <input type="radio" name="sex" id="sex_woman" value="여" class="valid" >                
+               <input type="radio" name="sex" id="sex_woman" value="여자" class="valid" >                
             <label id="female-label" for="genderFemale">여</label>           
          </div>
          
@@ -275,8 +280,9 @@
       <!-- 휴대폰 -->   
       
          <div class="vSpace">               
-            <label class="title-label" for="primaryPhone">휴대폰 번호</label>                
-            <p class="sub-label">전화번호를 입력하여 주시기 바랍니다. (휴대전화 우선)</p>
+            <label class="title-label" for="phone">전화 번호</label>
+                            
+            <!-- <p class="sub-label">전화번호를 입력하여 주시기 바랍니다. (휴대전화 우선)</p> -->
             
             <!-- 애 건들면 폼 깨짐 -->
             <div class="c-contner c-contner-single" style="width: 439px;" id="representCountryNumberCode_c">
@@ -287,29 +293,32 @@
             <!-- 애 건들면 폼 깨짐 -->
             <div class="c-search">
             <!-- 애 건들면 폼 깨짐 -->
-            <input type="text" title="목록" name="phone_cell" id="phone_cell" autocomplete="off" role="combobox" aria-owns="c-1541354062501341" aria-describedby="c-desc-label-1541354062501341" aria-activedescendant="c-0-1541354062501341" aria-readonly="false">
+            <input type="text"  name="phone" id="phone"  aria-owns="c-1541354062501341" aria-describedby="c-desc-label-1541354062501341" aria-activedescendant="c-0-1541354062501341">
             <!-- 애 건들면 폼 깨짐 -->
             </div>            
             </div>                
-      
+			   
+			   <div>                    
+      		   </div>            
+      	</div>                    
+            
       <!-- 휴대폰 끝 -->      
             
              <!-- 관심있는국가 -->
             
-            <div>                    
-      </div>            
-      </div>                    
       </div>        
             <div class="f-c-6">            
-               <div class="vSpace" for="country-selector">                
-               <label class="title-label">관심있는 국가</label>                
+               <div class="vSpace" for="country-selector" style=" width: 0px;height: 0px;">                 
+               
+               <label for="name" class="title-label required">한글 이름</label>
+               <!-- <label class="title-label">관심있는 국가</label> -->                
                                  
                <!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 --><!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
                <div class="c-contner c-contner-single" style="width: 429px;" id="country_selector_c">
                <!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
    
                
-               <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+               <input type="text" name="nation_first" id="nation_first"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
                
                   <!-- 추가 항목생성 -->   
                      
@@ -362,12 +371,12 @@
                         <label class="title-label" for="password1">비밀번호</label>                
                         
                         <!-- <input type="password" name="member_pw" id="member_pw" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732"> -->
-                        <input type="password" name="pwd" id="pwd" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
-                        <p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p>               
+                        <input type="password" name="member_pw" id="member_pw"  maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
+                        <!-- <p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p> -->               
                      </div>
                         <div>
-                           <label class="title-label" for="password">비밀번호 확인</label>                
-                           <input type="password" name="member_pw_ok" onkeyup="checkPwd()">
+                           <label class="title-label" for="member_pw">비밀번호 확인</label>                
+                           <input type="password" id="member_pw_ok" name="member_pw_ok" onkeyup="checkPwd()">
                               <div id="checkPwd" style="color: red;margin-top: 6px;"></div>
                            
                           <!--  <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164"> -->                                                                                        
@@ -386,9 +395,11 @@
                   <div class="f-r">        
                             <div class="f-c-2">            
                                <div id="error-wrapper"></div>            
-                                  <input type="button"  id="btnSubmit" class="medium button submit" accesskey="s" value="1234">
                                   
-                                  <!-- <a href="#" id="registrationSubmit" class="medium button submit">확인</a> -->            
+                                  <input type="button" id="btnSubmit" class="medium button submit" accesskey="s" value="확인" style="height: 63px;">
+                                  
+                                  
+                                  <!-- <a href="#" id="btnSubmit" class="medium button submit" accesskey="s" >확인</a>   -->          
                                   <!-- <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a> -->
                                   <a href="member_id_check.tvl?id=admin" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
                                </div>    

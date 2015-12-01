@@ -58,12 +58,14 @@ h2{
   font-size: 0.875rem;
   margin-bottom: 4px;
   display: block;
-  text-align: left;
+  /* text-align: left;nation_first */
 }
 
 .f-r > div > a {
   color: #000000;
 }
+
+
 
 
 
@@ -125,14 +127,232 @@ button.button.large.cta span, a.button.large.cta span {
   font-size: 0.875rem;
   margin-bottom: 4px;
   display: block;
-  text-align: left;
+  /* text-align: left; */
 }
 
 button.button, a.button {
   border: 2px solid #000000;
   font-size: 24px;
   padding: 20px;
-  color: #186686;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+}
+
+button.button, a.button {
+  border: 2px solid #000000;
+  font-size: 24px;
+  padding: 20px;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+}
+
+
+
+
+
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} */
+
+
+h2{
+    
+    font-family: sans-serif;
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.f-r {
+  font-size: 0;
+}
+
+.f-c-1, .f-c-2, .f-c-3, .f-c-4, .f-c-5, .f-c-6, .f-c-7, .f-c-8, .f-c-9, .f-c-10, .f-c-11, .f-c-12 {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+
+
+.f-c-5 {
+  width: 41.66667%;
+} */
+/* .f-c-5:first-child {
+  width: 41.66667%;
+  padding-left: 0;
+} */
+
+.f-c-6 {
+  width: 50%;
+}
+.f-c-6:first-child {
+  width: 50%;
+  padding-left: 0;
+}
+
+
+
+.f-r > div label, .f-r > div > input {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+}
+
+.f-r > div > input {
+  color: #000000;
+}
+
+
+
+
+
+.custom-form input[type="text"],
+.custom-form input[type="tel"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form input[type="number"],
+.custom-form textarea {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  padding: 13px 15px 14px;
+  border: 1px solid #919191;
+  width: 100%;
+  color: black;
+}
+
+select {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  padding: 13px 15px 14px;
+  border: 1px solid #919191;
+  width: 100%;
+  color: black;
+}
+
+label.required:after {
+  content: "*";
+  color: #d42a1d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 버튼 속 글 색상 */
+.f-r > div > input {
+  color: #000000;
+}
+
+/*버튼 반전*/
+
+button.button:hover, button.button:focus, input.button:hover, input.button:focus {
+  color: white;
+  background-color: #000000;
+}
+
+button.button.large.cta span, input.button.large.cta span {
+  margin: 23px 16px;
+  top: 0;
+}
+
+.f-r > div label, .f-r > div > input {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+}
+
+button.button, input.button {
+  border: 2px solid #000000;
+  font-size: 24px;
+  padding: 20px;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+}
+
+button.button, input.button {
+  border: 2px solid #000000;
+  font-size: 15px;
+  padding: 20px;
+  color: #000000;
   text-align: center;
   text-decoration: none;
   background-color: transparent;
