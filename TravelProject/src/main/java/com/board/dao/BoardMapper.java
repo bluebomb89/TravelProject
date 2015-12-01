@@ -22,7 +22,11 @@ public interface BoardMapper {
 	    @SelectKey(keyProperty="no",before=true,resultType=int.class,
 	    		statement="SELECT NVL(MAX(no)+1,1) as no FROM board")
 	    @Insert("INSERT INTO board VALUES("
-	    	   +"#{board_no},#{nickname},'',#{subject},#{free_content},#{free_pw},"
+	    	   +"#{board_no, jdbcType=INTEGER},"
+	    	   +"#{nickname, jdbcType=VARCHAR},"
+	    	   +"#{subject, jdbcType=VARCHAR},"
+	    	   +"#{free_content, jdbcType=VARCHAR},"
+	    	   +"#{free_pw, jdbcType=VARCHAR},"
 	    	   +"SYSDATE,0,"
 	    	   +"(SELECT NVL(MAX(group_id)+1,1) FROM board),"
 	    	   +"0,0,0,0)")
