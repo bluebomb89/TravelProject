@@ -3,84 +3,78 @@ package com.board.dao;
 import java.util.*;
 public class BoardVO {
 	private int board_no;
-	private int free_no;
-	private String free_pw;
-	private int member_no;
-	private String nickname;
-	private String subject;
-	public String getSubject() {
-		return subject;
-	}
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	private String member_pic;
-	private String free_content;
-	private Date free_date;
-	private String dbday;
-	private int replyCount;
-
-	
-	
-	public String getFree_pw() {
-		return free_pw;
-	}
-	public void setFree_pw(String free_pw) {
-		this.free_pw = free_pw;
-	}
-	public int getReplyCount() {
-		return replyCount;
-	}
-	public void setReplyCount(int replyCount) {
-		this.replyCount = replyCount;
-	}
-	public String getDbday() {
-		return dbday;
-	}
-	public void setDbday(String dbday) {
-		this.dbday = dbday;
-	}
+	private String board_name;
+	private int board_hit;
+	private int board_like;
+	private String board_content;
+	private Date board_regdate;
+	private String board_dbday;
+    private int group_id;
+    private int group_step;
+    private int group_tab;
 	public int getBoard_no() {
 		return board_no;
 	}
 	public void setBoard_no(int board_no) {
 		this.board_no = board_no;
 	}
-	public int getFree_no() {
-		return free_no;
+	public String getBoard_name() {
+		return board_name;
 	}
-	public void setFree_no(int free_no) {
-		this.free_no = free_no;
+	public void setBoard_name(String board_name) {
+		this.board_name = board_name;
 	}
-	public int getMember_no() {
-		return member_no;
+	public int getBoard_hit() {
+		return board_hit;
 	}
-	public void setMember_no(int member_no) {
-		this.member_no = member_no;
+	public void setBoard_hit(int board_hit) {
+		this.board_hit = board_hit;
 	}
-	public String getNickname() {
-		return nickname;
+	public int getBoard_like() {
+		return board_like;
 	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setBoard_like(int board_like) {
+		this.board_like = board_like;
 	}
-	public String getMember_pic() {
-		return member_pic;
+	public String getBoard_content() {
+		return board_content;
 	}
-	public void setMember_pic(String member_pic) {
-		this.member_pic = member_pic;
+	public void setBoard_content(String board_content) {
+		this.board_content = board_content;
 	}
-	public String getFree_content() {
-		return free_content;
+	public Date getBoard_regdate() {
+		return board_regdate;
 	}
-	public void setFree_content(String free_content) {
-		this.free_content = free_content;
+	public void setBoard_regdate(Date board_regdate) {
+		this.board_regdate = board_regdate;
 	}
-	public Date getFree_date() {
-		return free_date;
+	public String getBoard_dbday() {
+		return board_dbday;
 	}
-	public void setFree_date(Date free_date) {
-		this.free_date = free_date;
+	public void setBoard_dbday(String board_dbday) {
+		this.board_dbday = board_dbday;
 	}
-
+	public int getGroup_id() {
+		return group_id;
+	}
+	public void setGroup_id(int group_id) {
+		this.group_id = group_id;
+	}
+	public int getGroup_step() {
+		return group_step;
+	}
+	public void setGroup_step(int group_step) {
+		this.group_step = group_step;
+	}
+	public int getGroup_tab() {
+		return group_tab;
+	}
+	public void setGroup_tab(int group_tab) {
+		this.group_tab = group_tab;
+	}
+	
+	
+	
+		
+	
 }

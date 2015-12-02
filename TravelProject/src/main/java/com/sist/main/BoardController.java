@@ -36,7 +36,9 @@ public class BoardController {
 		   // √— ∆‰¿Ã¡ˆ
 		   model.addAttribute("totalpage", totalpage);
 		   model.addAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-		   return "board/list";
+		   
+		   return "board/board";
+		   
 	   }
 	  
 	  

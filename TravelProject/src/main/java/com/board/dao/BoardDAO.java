@@ -10,6 +10,7 @@ public class BoardDAO {
 	private BoardMapper mapper;
 	 public List<BoardVO> boardListData(Map map)
 	 {
+		 
 		 return mapper.boardListData(map);
 	 }
 	 public int boardTotalpage()

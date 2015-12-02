@@ -216,14 +216,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="col-md-12" >
          <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
             <div class="thumbnail" style="margin-bottom: 5px; border: 1px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)">
-               <a href="#"><img src="yodosa/contentImg/11.jpg" alt="" style="height: 230px; width: 270px;" class="thumbna"></a>
+               <a href="#"><img src="yodosa/contentImg/11.jpg" alt="" style="height: 230px; width: 270px;" class="thumbna">
+               	 
+               	 <%-- <a href="detail.do?no=${vo.no }">
+                                        <img src="<%=request.getContextPath()%>/shop/${vo.goods_image}" width=120 height=120>${vo.goods_name }(재고:${vo.goods_account }) --%>
+               </a>
                <div class="caption">
-                  <h3>1</h3>
+                   <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>${vo.board_no }</th>
+                                        <th>${vo.board_content }</th>
+                                        <th>${vo.board_name }</th>
+                                        <th>작성일</th>
+                                        <th>조회수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <c:forEach var="vo" items="${list }">
+                                    <tr>
+                                        <td>${vo.board_no }</td>
+                                        <td>
+                                         <c:if test="${vo.group_tab!=0 }">
+                                           <c:forEach var="i" begin="1" end="${vo.group_tab }">
+                                             &nbsp;&nbsp;
+                                           </c:forEach>
+                                           <img src="<%=request.getContextPath()%>/board/re_icon.gif">
+                                         </c:if>
+                                         <a href="content.do?no=${vo.board_no }&page=${curpage}">${vo.board_subject }</a>
+                                         <c:if test="${today==vo.board_dbday }">
+                                           <sup><img src="<%=request.getContextPath()%>/board/icon_new.png"></sup>
+                                         </c:if>
+                                        </td>
+                                        <td>${vo.board_name }111111</td>
+                                        <td>${vo.board_dbday }11111</td>
+                                        <td>${vo.board_hit }</td>
+                                    </tr>
+                                   </c:forEach>  
+                                </tbody>
+                            </table>
+                  <h3></h3>
                </div>
             </div>
             
          </div>
-         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
+         <!-- <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
             <div class="thumbnail" style="margin-bottom: 5px; border: 1px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)">
                <a href="#"><img src="yodosa/contentImg/11.jpg" alt="" style="height: 230px; width: 270px;" class="thumbna"></a>
                <div class="caption">
@@ -322,7 +359,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             
          </div>
-       </div>
+ -->       </div>
       
       <div class="travel_btn_group" style="margin: 0 auto;" align="center">
 			<div class="travel_btn" role="group" aria-label="First group">
@@ -339,6 +376,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<a href="travel.tvl?page=${curpage<totalpage?curpage+1:curpage }">
 				<button type="button" class="btn btn-default" onclick="btnUp()">＞</button>
 				</a>
+				
 			</div>
 		</div>
 </body>
