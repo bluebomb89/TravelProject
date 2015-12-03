@@ -4,41 +4,24 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.Update;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
 
 public interface BoardMapper {
-	 
-	    @Select("SELECT board_no,board_name,board_hit,board_like,board_dbday,num "
-	    	   +"FROM (SELECT board_no,board_subject,board_name,TO_CHAR(board_regdate,'YYYY-MM-DD') as board_dbday,board_hit,rownum as num "
-	    	   +"FROM (SELECT board_no,board_subject,board_name,board_regdate,board_hit "
-	    	   /*+"FROM board ORDER BY group_id DESC,group_step ASC)) "*/
-	    	   +"WHERE num BETWEEN #{start} AND #{end}")
-	    public List<BoardVO> boardListData(Map map);
-	    
-	    @Select("SELECT COUNT(*) FROM p3board")
-	    public int boardRowCount();
-	    
-	    @SelectKey(keyProperty="no",before=true,resultType=int.class,
-	    		statement="SELECT NVL(MAX(no)+1,1) as no FROM board")
-	    @Insert("INSERT INTO board VALUES("
-	    	   +"#{board_no, jdbcType=INTEGER},"
-	    	   +"#{board_name, jdbcType=VARCHAR},"
-	    	   +"#{board_hit, jdbcType=VARCHAR},"
-	    	   +"#{board_like, jdbcType=VARCHAR},"
-	    	   +"#{board_content, jdbcType=VARCHAR},"
-	    	   +"SYSDATE,0,"
-	    	   +"(SELECT NVL(MAX(group_id)+1,1) FROM board),"
-	    	   +"0,0,0,0,0)")
-	    public void boardInsert(BoardVO vo);
-	  
-	    @Update("UPDATE board SET "
-	    	   +"hit=hit+1 "
-	    	   +"WHERE no=#{no}")
-	    public void boardHitIncrement(int no);
-	    
-	    @Select("SELECT board_no,board_name,boarD_subject,board_content,"
-	    	  +"TO_CHAR(regdate,'YYYY-MM-DD') as board_dbday,board_hit "
-	    	  +"FROM board WHERE no=#{no}")
-	    public BoardVO boardContentData(int no);
+	@Select("SELECT NVL(MAX(board_tno)+1,1) as board_tno FROM travel_board")
+	public int boardsequence();
+
+	@Insert("INSERT INTO travel_board VALUES(#{board_tno},#{board_sub},'우식이형바보',SYSDATE,#{board_like},#{board_filename},#{board_filesize})")
+	public void boardInsert(BoardVO vo);
+	
+	@SelectKey(keyProperty="board_cont_no",resultType=int.class,before=true,statement="SELECT NVL(MAX(board_cont_no)+1,1) as board_cont_no FROM travel_board_cont")
+	@Insert("INSERT INTO travel_board_cont VALUES(#{board_cont_no},#{board_tno},#{board_filename},#{board_filesize},#{board_cont_cont})")
+	public void boardContInsert(BoardcontVO cvo);
+	
+	@Select("SELECT * FROM travel_board order by board_tno desc")
+	public List<BoardVO> boardListData();
+	
+	@Select("SELECT * FROM travel_board_cont order by board_tno desc, board_cont_no asc")
+	public List<BoardcontVO> boardContListData();
 }

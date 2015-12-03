@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@ $(function(){
 			+'<p class="cont_left img_cont" style="cursor:pointer; float: left; font-size: 30px;">Step'+(fileIndex+1)+'</p>'
 			+'<input type="file" class="travel_cont_img cont_left" name="files['+(fileIndex+1)+']" id="files['+(fileIndex+1)+']">'		
             +'<div id="" class="cont_left" style="display:inline-block">'
-            +'<textarea name="tv_cont'+(fileIndex+1)+'" id="tv_cont'+(fileIndex+1)+'" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>'
+            +'<textarea name="tv_cont['+(fileIndex+1)+']" id="tv_cont'+(fileIndex+1)+'" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>'
             +'</div>'
 			+'</div>'
 		);
@@ -92,14 +93,14 @@ function ImgUproad(step){
 </head>
 <body >
 <div id="travel_center" class="">
-    <form method=post action="insert_ok.tvl">
-    <div class="">
-	    <div class="">
-	        <div class="cont_box">
-	  				      
+    <form:form method="post" action="insert_ok.tvl" enctype="multipart/form-data" modelAttribute="vo">
+    <%-- <form method="post" action="insert_ok.tvl"> --%>
+    <div>
+	    <div>
+	        <div class="cont_box">     
       	      	<p class="travel_subject" style="margin-top: 50px">여행 제목</p>
-		      	<input type="text" name="" id="" class="subject_txt" placeholder="예) 소고기 미역국 끓이기" style="width:610px;position: absolute;">	
-	            <input type="file" class="travel_img_upload" style="margin-left: 800px;">
+		      	<input type="text" name="board_sub" id="board_sub" class="subject_txt" placeholder="예) 소고기 미역국 끓이기" style="width:610px;position: absolute;">	
+	            <input type="file" name="board_mainimage" id="board_mainimage" class="travel_img_upload" style="margin-left: 800px;">
 	        </div>
 	    </div>
     </div><!-- 타이틀 -->
@@ -110,32 +111,32 @@ function ImgUproad(step){
 	      <div class="" id="otv_cont1">
 	            <p class="cont_left" style="cursor:pointer; float: left; font-size: 30px;">Step1</p>
 	            <div id="file_div">
-	            	<input type="file" class="travel_cont_img cont_left" name="files[1]" id="files[1]">
+	            	<input type="file" class="travel_cont_img cont_left" name="files['0']" id="files[1]">
 	            </div>		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont1" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[0]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
    	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(1)">
 		  </div>
 		  <div class="" id="otv_cont2">
 	            <p class="cont_left img_cont" style="cursor:pointer; float: left; font-size: 30px;">Step2</p>
-	            <input type="file" class="travel_cont_img cont_left" name="files[2]" id="files[2]">		
+	            <input type="file" class="travel_cont_img cont_left" name="files['1']" id="files[2]">		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont2" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[1]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
 	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(2)">
 		  </div>
 		  <div class="" id="otv_cont3">
 	            <p class="cont_left img_cont" style="cursor:pointer; float: left; font-size: 30px;">Step3</p>
-	            <input type="file" class="travel_cont_img cont_left" name="files[3]" id="files[3]">		
+	            <input type="file" class="travel_cont_img cont_left" name="files['2']" id="files[3]">		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont3" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[2]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
 	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(3)">
 		  </div>
 	  </div>
           
-      <!-- 여행 내용 목록 -->
+      여행 내용 목록
 
       <div style="margin-left: auto;margin-right: auto;">
       	<button type="button" id="tvl_btn" class="">
@@ -145,13 +146,14 @@ function ImgUproad(step){
       		<span class=""></span>순서삭제
       	</button>
       </div>
-    </div><!--/cont_box-->
+    </div>
     
     <div id="trv_subcan">
-    	<button type="submit" id="" class="">저장</button>
-	    <button type="button" id="" class="" onclick="javascript:history.back()">취소</button>
-    </div> 
-    </form>
+    	<input type="submit" value="글쓰기">
+    	<input type="button" value="취소" onclick="javascript:history.back()">
+    </div>
+    </form:form> 
+    <%-- </form> --%>
   </div><!--/regi_center-->
 </body>
 </html>

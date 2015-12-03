@@ -1,22 +1,55 @@
 package com.board.dao;
-
+/*
+BOARD_TNO                                 NOT NULL NUMBER
+BOARD_SUB                                 NOT NULL CLOB
+BOARD_MAINIMAGE                           NOT NULL VARCHAR2(200)
+BOARD_NAME                                NOT NULL VARCHAR2(200)
+BOARD_SYSDATE                                      DATE
+BOARD_LIKE                                         NUMBER
+ */
 import java.util.*;
+
+import org.springframework.web.multipart.MultipartFile;
 public class BoardVO {
-	private int board_no;
+	private int board_tno;
+	private String board_sub;
+	private MultipartFile board_mainimage;
 	private String board_name;
-	private int board_hit;
+	private Date board_sysdate;
 	private int board_like;
-	private String board_content;
-	private Date board_regdate;
-	private String board_dbday;
-    private int group_id;
-    private int group_step;
-    private int group_tab;
-	public int getBoard_no() {
-		return board_no;
+	private String board_filename;
+	private String board_filesize;
+	
+	
+	public String getBoard_filename() {
+		return board_filename;
 	}
-	public void setBoard_no(int board_no) {
-		this.board_no = board_no;
+	public void setBoard_filename(String board_filename) {
+		this.board_filename = board_filename;
+	}
+	public String getBoard_filesize() {
+		return board_filesize;
+	}
+	public void setBoard_filesize(String board_filesize) {
+		this.board_filesize = board_filesize;
+	}
+	public int getBoard_tno() {
+		return board_tno;
+	}
+	public void setBoard_tno(int board_tno) {
+		this.board_tno = board_tno;
+	}
+	public String getBoard_sub() {
+		return board_sub;
+	}
+	public void setBoard_sub(String board_sub) {
+		this.board_sub = board_sub;
+	}
+	public MultipartFile getBoard_mainimage() {
+		return board_mainimage;
+	}
+	public void setBoard_mainimage(MultipartFile board_mainimage) {
+		this.board_mainimage = board_mainimage;
 	}
 	public String getBoard_name() {
 		return board_name;
@@ -24,11 +57,11 @@ public class BoardVO {
 	public void setBoard_name(String board_name) {
 		this.board_name = board_name;
 	}
-	public int getBoard_hit() {
-		return board_hit;
+	public Date getBoard_sysdate() {
+		return board_sysdate;
 	}
-	public void setBoard_hit(int board_hit) {
-		this.board_hit = board_hit;
+	public void setBoard_sysdate(Date board_sysdate) {
+		this.board_sysdate = board_sysdate;
 	}
 	public int getBoard_like() {
 		return board_like;
@@ -36,45 +69,5 @@ public class BoardVO {
 	public void setBoard_like(int board_like) {
 		this.board_like = board_like;
 	}
-	public String getBoard_content() {
-		return board_content;
-	}
-	public void setBoard_content(String board_content) {
-		this.board_content = board_content;
-	}
-	public Date getBoard_regdate() {
-		return board_regdate;
-	}
-	public void setBoard_regdate(Date board_regdate) {
-		this.board_regdate = board_regdate;
-	}
-	public String getBoard_dbday() {
-		return board_dbday;
-	}
-	public void setBoard_dbday(String board_dbday) {
-		this.board_dbday = board_dbday;
-	}
-	public int getGroup_id() {
-		return group_id;
-	}
-	public void setGroup_id(int group_id) {
-		this.group_id = group_id;
-	}
-	public int getGroup_step() {
-		return group_step;
-	}
-	public void setGroup_step(int group_step) {
-		this.group_step = group_step;
-	}
-	public int getGroup_tab() {
-		return group_tab;
-	}
-	public void setGroup_tab(int group_tab) {
-		this.group_tab = group_tab;
-	}
-	
-	
-	
-		
 	
 }

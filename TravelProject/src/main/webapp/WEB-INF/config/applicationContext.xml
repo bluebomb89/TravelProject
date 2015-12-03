@@ -34,14 +34,18 @@
        		p:maxIdle="#{db['maxIdle']}"
        		p:maxWait="#{db['maxWait']}"
      />
-     <bean id="board_mapper"
-       class="org.mybatis.spring.mapper.MapperFactoryBean"
-       p:sqlSessionFactory-ref="ssf"
-       p:mapperInterface="com.board.dao.BoardMapper"
-    />
 	 <bean id="ssf" class="org.mybatis.spring.SqlSessionFactoryBean"
 	 		p:dataSource-ref="datasource"/>
 	 <bean id="membermapper" class="org.mybatis.spring.mapper.MapperFactoryBean"
 	 		p:mapperInterface="com.member.dao.MemberMapper"
 	 		p:sqlSessionFactory-ref="ssf"/>
+     <bean id="board_mapper"
+       class="org.mybatis.spring.mapper.MapperFactoryBean"
+       p:sqlSessionFactory-ref="ssf"
+       p:mapperInterface="com.board.dao.BoardMapper"
+     />
+     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+     	p:maxUploadSize="10000000"
+     	p:defaultEncoding="UTF-8" 
+     />
 </beans>

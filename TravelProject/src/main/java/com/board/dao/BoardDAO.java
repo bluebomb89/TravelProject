@@ -8,23 +8,19 @@ import java.util.*;
 public class BoardDAO {
 	@Autowired
 	private BoardMapper mapper;
-	 public List<BoardVO> boardListData(Map map)
-	 {
-		 
-		 return mapper.boardListData(map);
-	 }
-	 public int boardTotalpage()
-	 {
-		 int count=mapper.boardRowCount();
-		 return (int)(Math.ceil(count/10.0));
-	 }
-	 public void boardInsert(BoardVO vo)
-	 {
-		 mapper.boardInsert(vo);
-	 }
-	 public BoardVO boardContentData(int no)
-	 {
-		 mapper.boardHitIncrement(no);
-		 return mapper.boardContentData(no);
-	 }
+	public int boardsequence(){
+		return mapper.boardsequence();
+	}
+	public void boardInsert(BoardVO vo){
+		mapper.boardInsert(vo);
+	}
+	public void boardContInsert(BoardcontVO cvo){
+		mapper.boardContInsert(cvo);
+	}
+	public List<BoardVO> boardListData(){
+		return mapper.boardListData();
+	}
+	public List<BoardcontVO> boardContListData(){
+		return mapper.boardContListData();
+	}
 }

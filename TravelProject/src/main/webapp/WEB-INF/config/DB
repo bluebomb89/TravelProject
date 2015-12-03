@@ -1,0 +1,20 @@
+drop table travel_board CASCADE CONSTRAINTS;
+drop table travel_board_cont CASCADE CONSTRAINTS;
+CREATE TABLE travel_board(
+	board_tno NUMBER PRIMARY KEY,
+	board_sub CLOB NOT NULL,
+	board_name VARCHAR2(500) NOT NULL,
+	board_sysdate DATE DEFAULT SYSDATE,
+	board_like NUMBER DEFAULT 0,
+	board_filename VARCHAR2(500) NOT NULL,
+	board_filesize VARCHAR2(500) NOT NULL
+);
+
+CREATE TABLE travel_board_cont(
+	board_cont_no NUMBER PRIMARY KEY,
+	board_tno NUMBER,
+	board_filename VARCHAR2(500) NOT NULL,
+	board_filesize VARCHAR2(500) NOT NULL,
+	board_cont_cont CLOB,
+	CONSTRAINT bd_tno FOREIGN KEY(board_tno) REFERENCES travel_board(board_tno)
+);
