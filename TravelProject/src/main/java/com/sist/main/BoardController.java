@@ -78,6 +78,6 @@ public class BoardController {
 			 cvo.setBoard_cont_cont(contc);
 			 dao.boardContInsert(cvo);
 		 }
-		 return "redirect:/board/board.tvl";
+		 return "redirect:/img.tvl";
 	   }
 }

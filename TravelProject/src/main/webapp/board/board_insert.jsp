@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/board/travel_isnert.css">
 <script type="text/javascript">
 $(function(){
-	var fileIndex=3;
+	var fileIndex=2;
 	$('#tvl_btn').click(function(){
 		$('#otv_conts').append(
 			 '<div class="" id="otv_cont'+(fileIndex+1)+'">'
