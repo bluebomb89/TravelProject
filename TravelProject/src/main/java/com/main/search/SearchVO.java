@@ -1,14 +1,14 @@
 package com.main.search;
 
 public class SearchVO {
-	private String searchTxt;
+	private String searchText;
 
-	public String getSearchTxt() {
-		return searchTxt;
+	public String getSearchText() {
+		return searchText;
 	}
 
-	public void setSearchTxt(String searchTxt) {
-		this.searchTxt = searchTxt;
+	public void setSearchText(String searchText) {
+		this.searchText = searchText;
 	}
 	
 }
