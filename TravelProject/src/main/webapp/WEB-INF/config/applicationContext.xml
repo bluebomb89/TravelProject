@@ -25,6 +25,7 @@
  	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
 		p:definitions="/WEB-INF/tiles.xml"
 	/>
+	
 	 <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource"
 	 		p:driverClassName="#{db['driver']}"
 	 		p:url="#{db['url']}"
