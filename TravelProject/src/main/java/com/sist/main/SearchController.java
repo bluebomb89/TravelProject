@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SearchController {
 	@RequestMapping("travel_search.tvl")
-	public String travel_search(SearchVO vo){
-		System.out.println(vo.getSearchText());
+	public String travel_search(SearchVO vo,String searchText){
+		System.out.println(searchText);
 //		System.out.println(map.size());
 		return "main";
 	}
