@@ -23,7 +23,7 @@ function searchBtn(){
 		<div id="searchTxtArea" class="searchTxtArea">OTRAVEL.COM</div>
 		<fieldset>
 		<form method="post" action="travel_search.tvl" id="travel_search" name="travel_search">
-			<input type="text" placeholder="여행지를 입력하세요" id="searchTxt" title="검색어" class="placeholder" name="searchTxt">
+			<input type="text" placeholder="여행지를 입력하세요" id="searchText" title="검색어" class="placeholder" name="searchText">
 		</form>
 			<a onclick="searchBtn()" class="searchBtn"><img src="backgroundimg/main/btn_search.png" alt="검색"></a>
 		</fieldset>
