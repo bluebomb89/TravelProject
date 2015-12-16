@@ -58,7 +58,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="join.tvl">JOIN</a>
                         		</li>
                		       		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="travel_insert.tvl">Board_Insert</a>
+                        			<a class="mbr-buttons__link btn text-white" href="travel_insert.tvl">Board</a>
                         		</li>
                         	</ul>
                         </div>

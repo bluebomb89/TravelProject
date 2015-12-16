@@ -28,5 +28,5 @@
 	<definition name="*/*" extends="main">
 		<put-attribute name="view" value="/{1}/{2}.jsp"/> 
 	</definition>
-
+	<definition name="member/member_ajax/member_id_check" template="/member/member_ajax/member_id_check.jsp"/>
 </tiles-definitions>

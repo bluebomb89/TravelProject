@@ -11,17 +11,23 @@ $(function(){
             $('#searchTxtArea').html(val);
         });
 });
+function searchBtn(){
+	$('#travel_search').submit();
+}
 </script>
+
 <!-- 슬라이더 메인 -->
 <div class="section">
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider-64" style="background-color: rgb(255, 255, 255);">
 	<div class="searchArea">
 		<div id="searchTxtArea" class="searchTxtArea">OTRAVEL.COM</div>
 		<fieldset>
-			<input type="text" placeholder="여행지를 입력하세요" id="searchText" title="검색어" class="placeholder">
-			<a href="#" class="searchBtn"><img src="backgroundimg/main/btn_search.png" alt="검색"></a>
+		<form method="post" action="travel_search.tvl" id="travel_search" name="travel_search">
+			<input type="text" placeholder="여행지를 입력하세요" id="searchText" title="검색어" class="placeholder" name="searchText">
+		</form>
+			<a onclick="searchBtn()" class="searchBtn"><img src="backgroundimg/main/btn_search.png" alt="검색"></a>
 		</fieldset>
-		<ul class="favorSList">
+<!-- 		<ul class="favorSList">
 		
 				<li><a href="#none" onclick="$KE.search('시드니'); return false;">시드니</a></li>
 				
@@ -33,7 +39,7 @@ $(function(){
 				
 				<li><a href="#none" onclick="$KE.search('러시아'); return false;">러시아</a></li>
 				
-		</ul>
+		</ul> -->
 	</div>
 	
     <div class="mbr-section__container">

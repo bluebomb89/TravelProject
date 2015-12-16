@@ -12,41 +12,44 @@
    <!-- 회원가입 비밀번호 중복 확인 -->
    
 
-		
+      
 <style type="text/css">
-	span{
-  		font-size: 15px;
-		}
-	#checkMsg{
-  				font-size: 12px;
-			 }
-	#checkPwd{
-  				color : red;
-  				font-size: 12px;
-			 }
+   span{
+        font-size: 15px;
+        
+      }
+   #checkMsg{
+              font-size: 12px;
+              font-weight: bold;
+          }
+   #checkPwd{
+              color : red;
+              font-size: 15px;
+              font-weight: bold;
+          }
 </style>
 
 
-	
+   
 
-		<script type="text/javascript" src="httpRequest.js"></script>
-		<script type="text/javascript">
-	 var checkFirst = false;
-	 var lastKeyword = '';
-	 var loopSendKeyword = false;
-	 
-	 /* function checkId() {
-	  if (checkFirst == false) {
-	   //0.5초 후에 sendKeyword()함수 실행
-	   setTimeout("sendId();", 500);
-	   loopSendKeyword = true;
-	  }
-	  checkFirst = true;
-	 } */
+      <script type="text/javascript" src="httpRequest.js"></script>
+      <script type="text/javascript">
+    var checkFirst = false;
+    var lastKeyword = '';
+    var loopSendKeyword = false;
+    
+    /* function checkId() {
+     if (checkFirst == false) {
+      //0.5초 후에 sendKeyword()함수 실행
+      setTimeout("sendId();", 500);
+      loopSendKeyword = true;
+     }
+     checkFirst = true;
+    } */
  
  function checkPwd(){
   var f1 = document.forms[0];
-  var pw1 = f1.pwd.value;
+  var pw1 = f1.member_pw.value;
   var pw2 = f1.member_pw_ok.value;
 
 
@@ -62,7 +65,7 @@
  }
 
 </script>
-		
+      
    
    <!-- 회원가입 비밀번호 중복 확인  끝 -->
    
@@ -71,15 +74,17 @@
       $('#btnSubmit').click(function(){
          
            var name_kor=$('#name_kor').val();
-         if(name_kor=="")
+  
+           if(name_kor=="")
          {
             alert("이름(한글)을 입력해주세요.");
             $('#name_kor').focus();
             return;
          }
          
-         var name_eng=$('#name_eng').val();
-         if(name_eng=="")
+           var name_eng=$('#name_eng').val();
+        
+           if(name_eng=="")
          {
             alert("이름(영문)을 입력해주세요.")
             $('#name_eng').focus();
@@ -156,42 +161,54 @@
    <script type="text/javascript">
    var httpRequest=null;
    function createHttpRequest(){
-   	if(window.ActiveXObject){ //IE 6.0 이상
-   		return new ActiveXObject("Msxml2.XMLHTTP");
-   		//Microsoft.XMLHTTP 6.0이하일때
-   	}else if(window.XMLHttpRequest){ // 크롬 , ff
-   		return new XMLHttpRequest();
-   	}else{ // 호환이 안될때
-   		return null; //지원하지 않는 브라우저
-   	}
+      if(window.ActiveXObject){ //IE 6.0 이상
+         return new ActiveXObject("Msxml2.XMLHTTP");
+         //Microsoft.XMLHTTP 6.0이하일때
+      }else if(window.XMLHttpRequest){ // 크롬 , ff
+         return new XMLHttpRequest();
+      }else{ // 호환이 안될때
+         return null; //지원하지 않는 브라우저
+      }
    }
    function sendMessage(method,param,url,callback){
-   	// 서버 연결 DWR,DOJO
-   	httpRequest=createHttpRequest();
-   	httpRequest.open(method,url+param,true);
-   	// true: 비동기 false:동기
-   	httpRequest.onreadystatechange=callback;
-   	httpRequest.send(null);
+      // 서버 연결 DWR,DOJO
+      httpRequest=createHttpRequest();
+      httpRequest.open(method,url+param,true);
+      // true: 비동기 false:동기
+      httpRequest.onreadystatechange=callback;
+      httpRequest.send(null);
    }
+ 
+   
+   //회원아이디 중복 체크 시작
+   
    $(function(){
-		  $('#member_id').keyup(function(){
-			  var id=$('#member_id').val();
-			  param="?id="+id;
-			  sendMessage('GET', param, "member_id_check.tvl", idcheck_result); 
-		  })
-	   });
+        $('#member_id').keyup(function(){
+           var id=$('#member_id').val();
+           param="?id="+id;
+           sendMessage('GET', param, "member_id_check.tvl", idcheck_result); 
+        })
+      });
    function idcheck_result(){
-	   	if(httpRequest.readyState==4){
-	   		if(httpRequest.status==200){
-	   			var res=httpRequest.responseText;
-	   			//alert(res);
-	   			$('#member_id_check').text(res);
-	   			// 보여주면서 div에 값저장
-	   			//alert(res);
-	   		}		
-	   	}
-	   }
+         if(httpRequest.readyState==4){
+            if(httpRequest.status==200){
+               var res=httpRequest.responseText;
+               //alert(res);
+               $('#member_id_check').html(res);
+               //$('#member_id_check').text(res);
+               // 보여주면서 div에 값저장
+               //alert(res);
+            }      
+         }
+      }
+   
+   //회원중복 끝
+   
    </script>
+   
+   
+   
+   
    </head>
 <body>
    
@@ -208,7 +225,7 @@
       
       <div class="inner-column-6">                
          <label for="name" class="title-label required">한글 이름</label>                
-         <span class="offscreen">필수입력항목 입니다.</span>                
+                         
          <input type="text" name="name_kor" id="name_kor" class="krFirstName required" value="">            
       </div>
       
@@ -244,9 +261,9 @@
          
          <div class="vSpace" style="margin-top: 60px">                
             <label class="title-label" for="genderMale">성별</label>                
-               <input type="radio" name="sex" id="sex_man" value="남" class="required valid">                
+               <input type="radio" name="sex" id="sex_man" value="남자" class="required valid">                
             <label for="genderMale">남</label>                
-               <input type="radio" name="sex" id="sex_woman" value="여" class="valid" >                
+               <input type="radio" name="sex" id="sex_woman" value="여자" class="valid" >                
             <label id="female-label" for="genderFemale">여</label>           
          </div>
          
@@ -263,8 +280,9 @@
       <!-- 휴대폰 -->   
       
          <div class="vSpace">               
-            <label class="title-label" for="primaryPhone">휴대폰 번호</label>                
-            <p class="sub-label">전화번호를 입력하여 주시기 바랍니다. (휴대전화 우선)</p>
+            <label class="title-label" for="phone">전화 번호</label>
+                            
+            <!-- <p class="sub-label">전화번호를 입력하여 주시기 바랍니다. (휴대전화 우선)</p> -->
             
             <!-- 애 건들면 폼 깨짐 -->
             <div class="c-contner c-contner-single" style="width: 439px;" id="representCountryNumberCode_c">
@@ -275,29 +293,32 @@
             <!-- 애 건들면 폼 깨짐 -->
             <div class="c-search">
             <!-- 애 건들면 폼 깨짐 -->
-            <input type="text" title="목록" name="phone_cell" id="phone_cell" autocomplete="off" role="combobox" aria-owns="c-1541354062501341" aria-describedby="c-desc-label-1541354062501341" aria-activedescendant="c-0-1541354062501341" aria-readonly="false">
+            <input type="text"  name="phone" id="phone"  aria-owns="c-1541354062501341" aria-describedby="c-desc-label-1541354062501341" aria-activedescendant="c-0-1541354062501341">
             <!-- 애 건들면 폼 깨짐 -->
             </div>            
             </div>                
-      
+			   
+			   <div>                    
+      		   </div>            
+      	</div>                    
+            
       <!-- 휴대폰 끝 -->      
             
              <!-- 관심있는국가 -->
             
-            <div>                    
-      </div>            
-      </div>                    
       </div>        
             <div class="f-c-6">            
-               <div class="vSpace" for="country-selector">                
-               <label class="title-label">관심있는 국가</label>                
+               <div class="vSpace" for="country-selector" style=" width: 0px;height: 0px;">                 
+               
+               <label for="name" class="title-label required">한글 이름</label>
+               <!-- <label class="title-label">관심있는 국가</label> -->                
                                  
                <!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 --><!--  이밑에 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
                <div class="c-contner c-contner-single" style="width: 429px;" id="country_selector_c">
                <!--  애 디아이브이 건드리면 밑에 아이디 비밀번호깨짐 -->
    
                
-               <input type="text" name="lastName" id="lastName"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
+               <input type="text" name="nation_first" id="nation_first"  class="" aria-invalid="true" aria-describedby="lastName-validate-label-517636" > <img src="images/down.gif" onclick="add_item()"  style="width: 25px;margin-top: 8px;margin-bottom: 8px;margin-left: 85px;">
                
                   <!-- 추가 항목생성 -->   
                      
@@ -331,8 +352,12 @@
                         <label class="title-label" for="userId">회원 아이디 
                            <span id="uniqueUserID"></span>
                         </label>                
-                        <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" style="width: 530px;">
-                        <label id="member_id_check"></label>
+                        <input type="text" name="member_id" id="member_id" class="" maxlength="12" aria-invalid="true" aria-describedby="userId-validate-label-700245" autocomplete="off" style="width: 530px;">
+                        <label style="text-align: left;">
+                        	<ul id="member_id_check" style="list-style:none;padding-left:0px;margin-top: 7px;">
+                        		
+                        	</ul>
+                        </label>
                                        
                      </div>        
                   </div>        
@@ -346,20 +371,20 @@
                         <label class="title-label" for="password1">비밀번호</label>                
                         
                         <!-- <input type="password" name="member_pw" id="member_pw" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732"> -->
-                        <input type="password" name="pwd" id="pwd" maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
-                        <p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p>               
+                        <input type="password" name="member_pw" id="member_pw"  maxlength="20" class="error" aria-invalid="true" aria-describedby="password1-validate-label-185732">
+                        <!-- <p id="password1-validate-label-185732" data-errored-element="password1" class="error">비밀번호(필수 정보입니다.)</p> -->               
                      </div>
                         <div>
-                           <label class="title-label" for="password">비밀번호 확인</label>                
-                           <input type="password" name="member_pw_ok" onkeyup="checkPwd()">
-                          	 <div id="checkPwd"></div>
+                           <label class="title-label" for="member_pw">비밀번호 확인</label>                
+                           <input type="password" id="member_pw_ok" name="member_pw_ok" onkeyup="checkPwd()">
+                              <div id="checkPwd" style="color: red;margin-top: 6px;"></div>
                            
                           <!--  <input type="password" name="member_pw_ok" id="member_pw_ok" maxlength="20" class="error" aria-invalid="true" aria-describedby="password-validate-label-750164"> -->                                                                                        
                            
                                                           
-                           	</div>      
-                  		   
-    							 
+                              </div>      
+                           
+                          
                   </div>
                </div>
                   
@@ -370,9 +395,11 @@
                   <div class="f-r">        
                             <div class="f-c-2">            
                                <div id="error-wrapper"></div>            
-                                  <input type="button"  id="btnSubmit" class="medium button submit" accesskey="s" value="1234">
                                   
-                                  <!-- <a href="#" id="registrationSubmit" class="medium button submit">확인</a> -->            
+                                  <input type="button" id="btnSubmit" class="medium button submit" accesskey="s" value="확인" style="height: 63px;">
+                                  
+                                  
+                                  <!-- <a href="#" id="btnSubmit" class="medium button submit" accesskey="s" >확인</a>   -->          
                                   <!-- <a href="#" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a> -->
                                   <a href="member_id_check.tvl?id=admin" id="registrationSubmit" class="medium button submit" style="bottom: 67px;left: 100px;">취소</a>        
                                </div>    
