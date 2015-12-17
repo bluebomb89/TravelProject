@@ -61,8 +61,8 @@
      input-path="/input/"
      output-path="/output/"
      configuration-ref="hdfsConf"
-     mapper="com.sist.movie.MovieMapper"
-     reducer="com.sist.movie.MovieReducer"
+     mapper="com.main.search.MovieMapper"
+     reducer="com.main.search.MovieReducer"
    />
    <hadoop:job-runner id="wordCountRunner"
     job-ref="wordCount"

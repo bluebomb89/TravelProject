@@ -20,8 +20,7 @@ public class SearchManager {
 	   @Autowired
 		private Configuration conf;
 	     List<Word> list=new ArrayList<Word>();
-	public void movie_parse(String title)
-		     throws Exception
+	public void movie_parse(String title) throws Exception
 		     {
 		    	  list.clear();
 		    	  System.out.println("title="+title);
@@ -45,7 +44,7 @@ public class SearchManager {
 		 		try
 		 		{
 		 			 FileSystem dfs=FileSystem.get(conf);
-		 			 dfs.copyFromLocalFile(new Path("/home/sist/desc.txt"), new Path("/input/desc.txt"));
+		 			 dfs.copyFromLocalFile(new Path("/home/sist/book.txt"), new Path("/input/book.txt"));
 		 		     if(dfs.exists(new Path("/output")))
 		 		      {
 		 		    	 dfs.delete(new Path("/output"), true);
@@ -61,10 +60,10 @@ public class SearchManager {
 		 		try
 		 		{
 		 			FileSystem dfs=FileSystem.get(conf);
-		 			dfs.copyToLocalFile(new Path("/output/part-r-00000"), new Path("/home/sist/feel"));
-		 			if(dfs.exists(new Path("/input/desc.txt")))
+		 			dfs.copyToLocalFile(new Path("/output/part-r-00000"), new Path("/home/sist/bookfeel"));
+		 			if(dfs.exists(new Path("/input/book.txt")))
 		 		    {
-		 		    dfs.delete(new Path("/input/desc.txt"),true);
+		 		    dfs.delete(new Path("/input/book.txt"),true);
 		 		    }
 		 		   dfs.close();
 		 			dfs.close();

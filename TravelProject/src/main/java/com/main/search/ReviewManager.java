@@ -67,7 +67,7 @@ public class ReviewManager {
       public void review_find(String title)  throws Exception
       {
     	num=1;
-    	File file=new File("/home/sist/desc.txt");
+    	File file=new File("/home/sist/book.txt");
     	if(num==1)
     	{
     		file.delete();
@@ -134,7 +134,7 @@ public class ReviewManager {
     		    	data=data.replace(";", "");
     		    	System.out.println(data);
     		    	
-    		    	File file=new File("/home/sist/desc.txt");
+    		    	File file=new File("/home/sist/book.txt");
     		    	
     		    	FileWriter fw=new FileWriter(file,true);
     		    	fw.write(data);
