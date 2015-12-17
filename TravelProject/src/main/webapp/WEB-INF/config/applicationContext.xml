@@ -8,13 +8,15 @@
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
-	xsi:schemaLocation="http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
-		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+	xmlns:hadoop="http://www.springframework.org/schema/hadoop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/hadoop http://www.springframework.org/schema/hadoop/spring-hadoop.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
-		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 	<util:properties id="db" location="/WEB-INF/config/db.properties"/>
 	<context:annotation-config/>
 	<context:component-scan base-package="com.sist.*"/>
@@ -52,4 +54,18 @@
      	p:maxUploadSize="10000000"
      	p:defaultEncoding="UTF-8" 
      />
+     <hadoop:configuration id="hdfsConf">
+   fs.default.name=hdfs://localhost:9000
+   </hadoop:configuration>
+   <hadoop:job id="wordCount"
+     input-path="/input/"
+     output-path="/output/"
+     configuration-ref="hdfsConf"
+     mapper="com.sist.movie.MovieMapper"
+     reducer="com.sist.movie.MovieReducer"
+   />
+   <hadoop:job-runner id="wordCountRunner"
+    job-ref="wordCount"
+    run-at-startup="false"
+   />
 </beans>

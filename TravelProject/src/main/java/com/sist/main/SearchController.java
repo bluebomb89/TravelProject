@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class SearchController {
+	private SearchManager smr;
 	@RequestMapping("travel_search.tvl")
-	public String travel_search(SearchVO vo,String searchText){
+	public String travel_search(SearchVO vo,String searchText) throws Exception{
 		System.out.println(searchText);
-		
+		smr.movie_parse(searchText);
 		return "main";
 	}
 }
