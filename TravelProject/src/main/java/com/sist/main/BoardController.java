@@ -35,12 +35,12 @@ public class BoardController {
 	
 	 @RequestMapping("insert_ok.tvl")
 	   public String board_insert_ok(BoardVO vo,BoardcontVO cvo) throws Exception{
-		 // ½ÃÄö½º ³Ñ¹ö
+		 // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½
 		 int sequence=dao.boardsequence();
-		 String path="C:\\springDev\\TravelProject\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\TravelProject\\board\\image\\";
-		 String spath="C:\\springDev\\TravelProject\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\TravelProject\\board\\image\\contimage\\";
+		 String path="/home/sist/jasb/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TravelProject/board/image/";
+		 String spath="/home/sist/jasb/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TravelProject/board/image/contimage/";
 		
-		 // Å¸ÀÌÆ² DB¿¬µ¿ 
+		 // Å¸ï¿½ï¿½Æ² DBï¿½ï¿½ï¿½ï¿½ 
 		 if(vo.getBoard_mainimage()==null || vo.getBoard_mainimage().getSize()<1){
 		 	vo.setBoard_filename("");
 			vo.setBoard_filesize("");
@@ -52,14 +52,13 @@ public class BoardController {
 			File file=new File(path+name);
 			mf.transferTo(file);
 			fs=String.valueOf(mf.getSize());
-			System.out.println("ÀÌ¸§ : "+name);
 			vo.setBoard_filename(name);
 			vo.setBoard_filesize(fs);
 		 }
 		 vo.setBoard_tno(sequence);
 		 dao.boardInsert(vo);
 		 
-		 // ³»¿ë DB ¿¬µ¿
+		 // 
 		 boolean conts=true;
 		 int count=1;
 		 List<MultipartFile> list=cvo.getFiles();
@@ -80,4 +79,8 @@ public class BoardController {
 		 }
 		 return "redirect:/img.tvl";
 	   }
+	 @RequestMapping("koreabook.tvl")
+	 public String koreabook(){
+		 return "board/koreabook";
+	 }
 }
