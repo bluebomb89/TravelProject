@@ -20,6 +20,23 @@
 		</repository>
 	</repositories>
 	<dependencies>
+	   <!-- Hadoop -->
+	    <dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-core</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+	    <dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-hadoop</artifactId>
+			<version>1.0.2.RELEASE</version>
+		</dependency>
+	    <!-- Jsoup -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.8.3</version>
+		</dependency>
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -218,11 +235,11 @@
 			<artifactId>twitter4j-stream</artifactId>
 			<version>4.0.2</version>
 		</dependency>
-<!--         <dependency>
+        <dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
-		</dependency> -->
+		</dependency>
         <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc14</artifactId>
@@ -236,19 +253,19 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
 		</dependency>	
-		 <!-- AOP -->
+		 <!-- AOP추가 -->
       <dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.6.5</version>
 		</dependency>
-      <!-- AOP -->
+      <!-- AOP추가 -->
       <dependency>
          <groupId>aopalliance</groupId>
          <artifactId>aopalliance</artifactId>
          <version>1.0</version>
       </dependency>
-      <!-- AOP -->
+      <!-- AOP추가 -->
       <dependency>
 		<groupId>asm</groupId>
 		<artifactId>asm</artifactId>
