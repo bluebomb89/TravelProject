@@ -17,7 +17,9 @@ import java.text.*;
 @Controller
 public class BoardController {
 	@Autowired
-	private BoardDAO dao;	  
+	private BoardDAO dao;	 
+	@Autowired
+	private BoardManager bm;
 	@RequestMapping("img.tvl")
 	public String member_insert(Model model){
 		List<BoardVO> list=dao.boardListData();
@@ -80,7 +82,15 @@ public class BoardController {
 		 return "redirect:/img.tvl";
 	   }
 	 @RequestMapping("koreabook.tvl")
-	 public String koreabook(){
+	 public String koreabook(Model model) throws Exception{
+		 int page=1;
+		 List<KoreaBookVO> list=bm.koreaBookRecommend(page);
+		 for(int i=0; i<list.size(); i++){
+			 System.out.println(i+"번째"+list.get(i).getImg());
+			 System.out.println(list.get(i).getCont());
+		 }
+		 
+		 model.addAttribute("list", list);
 		 return "board/koreabook";
 	 }
 }
