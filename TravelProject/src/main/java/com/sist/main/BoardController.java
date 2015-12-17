@@ -1,6 +1,7 @@
 package com.sist.main;
 
 import javax.annotation.Resource;
+import javax.xml.ws.RequestWrapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -85,12 +86,13 @@ public class BoardController {
 	 public String koreabook(Model model) throws Exception{
 		 int page=1;
 		 List<KoreaBookVO> list=bm.koreaBookRecommend(page);
-		 for(int i=0; i<list.size(); i++){
-			 System.out.println(i+"번째"+list.get(i).getImg());
-			 System.out.println(list.get(i).getCont());
-		 }
-		 
+		 List<KoreaBookVO> blist=bm.koreaBookBest(page);
 		 model.addAttribute("list", list);
+		 model.addAttribute("blist", blist);
 		 return "board/koreabook";
+	 }
+	 @RequestMapping("usabook.tvl")
+	 public String usabook(){
+		 return "board/usabook";
 	 }
 }

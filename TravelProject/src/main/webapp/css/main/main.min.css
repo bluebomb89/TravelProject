@@ -1271,7 +1271,7 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 21px;
+  font-size: 14px;
 }
 h4,
 .h4 {
@@ -1552,7 +1552,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  letter-spacing: 6px;
+  letter-spacing: 1px;
   font-weight: bold;
 }
 h1.cut-letter-spacing,
@@ -5382,7 +5382,6 @@ a.badge:focus {
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
   border-radius: 0px;
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
@@ -5400,6 +5399,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
+  height: 100px;  
   color: #252525;
 }
 .alert {
