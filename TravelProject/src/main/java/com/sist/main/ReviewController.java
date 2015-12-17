@@ -13,7 +13,7 @@ import com.sist.main.ReviewManager;
 public class ReviewController {
 	@Autowired
     private ReviewManager rm;
-	@RequestMapping("review/review.do")
+	@RequestMapping("review/review.tvl")
 	public String review_main(String page,Model model)
 	{
 		if(page==null)
@@ -27,13 +27,13 @@ public class ReviewController {
 		model.addAttribute("jsp", "../review/review.jsp");
 		return "movie/main";
 	}
-	@RequestMapping("review/find.do")
+	@RequestMapping("review/find.tvl")
 	public String review_find(String movie_title)
 	throws Exception
 	{
 		
 		rm.review_find(movie_title);
-		return "redirect:/review/review.do";
+		return "redirect:/review/review.tvl";
 	}
 }
 
