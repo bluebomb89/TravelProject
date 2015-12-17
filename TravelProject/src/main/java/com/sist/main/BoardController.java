@@ -1,6 +1,7 @@
 package com.sist.main;
 
 import javax.annotation.Resource;
+import javax.xml.ws.RequestWrapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -82,5 +83,9 @@ public class BoardController {
 	 @RequestMapping("koreabook.tvl")
 	 public String koreabook(){
 		 return "board/koreabook";
+	 }
+	 @RequestMapping("usabook.tvl")
+	 public String usabook(){
+		 return "board/usabook";
 	 }
 }
