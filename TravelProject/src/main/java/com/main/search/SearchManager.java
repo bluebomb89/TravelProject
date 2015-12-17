@@ -23,7 +23,7 @@ public class SearchManager {
 	public void movie_parse(String title) throws Exception
 		     {
 		    	  list.clear();
-		    	  System.out.println("title="+title);
+//		    	  System.out.println("title="+title);
 		    	  rm.review_find(title);//movie.txt
 		    	  jobBefore();
 		  		  jobExecute();

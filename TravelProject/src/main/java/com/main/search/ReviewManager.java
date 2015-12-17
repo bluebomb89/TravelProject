@@ -97,7 +97,7 @@ public class ReviewManager {
     						{
     							String data=in.readLine();
     							if(data==null) break;
-    							System.out.println(data);
+//    							System.out.println(data);
     							sb.append(data+"\n");
     						}
     						conn.disconnect();
@@ -132,7 +132,7 @@ public class ReviewManager {
     		    	data=data.replace("?", "");
     		    	data=data.replace(".", "");
     		    	data=data.replace(";", "");
-    		    	System.out.println(data);
+//    		    	System.out.println(data);
     		    	
     		    	File file=new File("/home/sist/book.txt");
     		    	
