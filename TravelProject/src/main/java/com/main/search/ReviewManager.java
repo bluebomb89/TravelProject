@@ -56,7 +56,7 @@ public class ReviewManager {
     		  rc.setStringEncoding("utf8");
     		  rc.voidEval("library(KoNLP)");
     		  
-    		  rc.voidEval("txt<-readLines(\"/home/sist/desc.txt\")");
+    		  rc.voidEval("txt<-readLines(\"/home/sist/book.txt\")");
     		  REXP p=rc.eval("txt");
     		  String[] data=p.asStrings();
     		  total=(int)(Math.ceil(data.length/10.0));
@@ -135,7 +135,7 @@ public class ReviewManager {
 //    		    	System.out.println(data);
     		    	
     		    	File file=new File("/home/sist/book.txt");
-    		    	
+    		    	if(file.exists()) file.delete();
     		    	FileWriter fw=new FileWriter(file,true);
     		    	fw.write(data);
     		    	fw.close();

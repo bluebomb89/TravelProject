@@ -1,5 +1,6 @@
 package com.main.search;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +34,11 @@ public class SearchManager {
 		 	{
 		 		try
 		 		{
+		 			FileSystem dfs=FileSystem.get(conf);
+			 		if(dfs.exists(new Path("/output"))) dfs.delete(new Path("/output"), true);
+			 		System.out.println("asdfkajskldfjwelfjaosejfiowejf");
 		 			jRunner.call();
+		 			dfs.close();
 		 		}catch(Exception ex)
 		 		{
 		 			System.out.println(ex.getMessage());
@@ -44,11 +49,9 @@ public class SearchManager {
 		 		try
 		 		{
 		 			 FileSystem dfs=FileSystem.get(conf);
+			 		 if(dfs.exists(new Path("/input"))) dfs.delete(new Path("/input"),true);
 		 			 dfs.copyFromLocalFile(new Path("/home/sist/book.txt"), new Path("/input/book.txt"));
-		 		     if(dfs.exists(new Path("/output")))
-		 		      {
-		 		    	 dfs.delete(new Path("/output"), true);
-		 		      }
+		 		     dfs.close();
 		 		    
 		 		}catch(Exception ex)
 		 		{
@@ -60,13 +63,10 @@ public class SearchManager {
 		 		try
 		 		{
 		 			FileSystem dfs=FileSystem.get(conf);
+		 			File file=new File("/home/sist/bookfeel");
+		 			if(file.exists()) file.delete();
 		 			dfs.copyToLocalFile(new Path("/output/part-r-00000"), new Path("/home/sist/bookfeel"));
-		 			if(dfs.exists(new Path("/input/book.txt")))
-		 		    {
-		 		    dfs.delete(new Path("/input/book.txt"),true);
-		 		    }
 		 		   dfs.close();
-		 			dfs.close();
 		 		}catch(Exception ex)
 		 		{
 		 			System.out.println(ex.getMessage());
