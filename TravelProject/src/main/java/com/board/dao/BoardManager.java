@@ -35,7 +35,23 @@ public class BoardManager {
 //			kvo.setRealcont(cont.get);
 			list.add(kvo);
 		}
-		System.out.println(list.get(1).getRealcont());
+		return list;
+	}
+	public List<UsaBookVO> UsaBookBest(int page) throws Exception{
+		List<UsaBookVO> list=new ArrayList<UsaBookVO>();
+		Document document=Jsoup.connect("http://foreign.aladin.co.kr/shop/common/wbest.aspx?BestType=ForeignEnglish&BranchType=7&CID=0&page="+page+"&cnt=200&SortOrder=1").get();
+		Elements imgElements=document.select("div.ss_book_box > table > tbody > tr > td > table > tbody > tr > td > a >img");
+		Elements contElements=document.select("div.ss_book_list > ul > li > a.bo3 b");
+		for(int i=0;i<contElements.size();i=i+2){
+			UsaBookVO uvo=new UsaBookVO();
+			uvo.setImg(imgElements.get(i).attr("src"));
+			uvo.setCont(contElements.get(i/2).text());
+			if(i-1==6) i++;
+			if(i==11) i++;
+			if(i==18) i++;
+			if(i==20) i++;
+			list.add(uvo);			
+		}
 		return list;
 	}
 }

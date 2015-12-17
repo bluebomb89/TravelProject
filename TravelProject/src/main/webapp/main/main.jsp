@@ -49,7 +49,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="koreabook.tvl">국내도서</a>
                         		</li>
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">국외도서</a>
+                        			<a class="mbr-buttons__link btn text-white" href="usabook.tvl">국외도서</a>
                         		</li>
          		                <li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="img.tvl">IMG</a>

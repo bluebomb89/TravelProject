@@ -92,7 +92,10 @@ public class BoardController {
 		 return "board/koreabook";
 	 }
 	 @RequestMapping("usabook.tvl")
-	 public String usabook(){
+	 public String usabook(Model model) throws Exception{
+		 int page=1;
+		 List<UsaBookVO> list=bm.UsaBookBest(page);
+		 model.addAttribute("list", list);
 		 return "board/usabook";
 	 }
 }
