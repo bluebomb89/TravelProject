@@ -49,7 +49,7 @@
                         			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">ABOUT</a>
                         		</li>
                         		<li class="mbr-navbar__item">
-                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">CONTACT</a>
+                        			<a class="mbr-buttons__link btn text-white" href="http://mobirise.com">REVIEW</a>
                         		</li>
          		                <li class="mbr-navbar__item">
                         			<a class="mbr-buttons__link btn text-white" href="img.tvl">IMG</a>
