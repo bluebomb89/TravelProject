@@ -100,9 +100,9 @@
 <!---------------------------------------------------------------------------------------------------- ------------------>
 
         <div class="col-md-12" >
-         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
+         <div style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
 <c:forEach var="kvo" items="${list}" varStatus="status">  
-            <div class="thumbnail" style="margin-bottom: 5px; border: 1px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)"> 
+            <div class="thumbnail col-sm-3 col-md-3.5" style="margin-bottom: 5px; onmouseout="change2(this)" onmouseover="change1(this)"> 
                <a data-toggle="modal" data-target="#my[${status.index}]"><img src="${kvo.img}" alt="" style="height: 230px; width: 270px;" class="thumbna">
                	 <%-- <a href="detail.do?no=${vo.no }"><img src="<%=request.getContextPath()%>/shop/${vo.goods_image}" width=120 height=120>${vo.goods_name }(재고:${vo.goods_account }) --%>
                </a>
