@@ -64,16 +64,16 @@
 
         <div class="col-md-12" >
          <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
-<c:forEach var="vo" items="${list}">  
+<c:forEach var="kvo" items="${list}" varStatus="status">  
             <div class="thumbnail" style="margin-bottom: 5px; border: 1px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)"> 
-               <a data-toggle="modal" data-target="#my${vo.board_tno}"><img src="<%=request.getContextPath()%>/board/image/${vo.board_filename}" alt="" style="height: 230px; width: 270px;" class="thumbna">
+               <a data-toggle="modal" data-target="#my[${status.index}]"><img src="${kvo.img}" alt="" style="height: 230px; width: 270px;" class="thumbna">
                	 <%-- <a href="detail.do?no=${vo.no }"><img src="<%=request.getContextPath()%>/shop/${vo.goods_image}" width=120 height=120>${vo.goods_name }(재고:${vo.goods_account }) --%>
                </a>
                <div class="caption">
-                  <h3>${vo.board_sub}</h3>
+                  <h3>${kvo.cont}</h3>
                </div>
             </div>
-			<div class="modal fade bs-example-modal-lg bs-example-modal-lg" id="my${vo.board_tno }" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<%-- <div class="modal fade bs-example-modal-lg bs-example-modal-lg" id="my${vo.board_tno }" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 			  <div class="modal-dialog modal-lg ">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -96,7 +96,7 @@
 			      </div>
 			    </div>
 			  </div>
-			</div>
+			</div> --%>
 </c:forEach>
          </div>
         </div>
