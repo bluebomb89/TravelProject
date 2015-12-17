@@ -3,6 +3,14 @@ package com.board.dao;
 public class KoreaBookVO {
 	private String img;
 	private String cont;
+	private String realcont;
+	
+	public String getRealcont() {
+		return realcont;
+	}
+	public void setRealcont(String realcont) {
+		this.realcont = realcont;
+	}
 	public String getImg() {
 		return img;
 	}
