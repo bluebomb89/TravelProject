@@ -20,7 +20,7 @@ public class BoardManager {
 				list.add(kvo);
 				if(i==122) i--;
 				if(i==124) i++;
-			}	
+			}
 		return list;
 	}
 	public List<KoreaBookVO> koreaBookBest(int page) throws Exception{

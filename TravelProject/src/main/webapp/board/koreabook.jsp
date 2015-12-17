@@ -23,7 +23,7 @@
    <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
          style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px; ">
-         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">베스트 셀러</h3>
+         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">추천 도서</h3>
          <div class="top_title_r" style="padding-top: 0px;">
             
             <div class="btn-group" role="group">
@@ -33,9 +33,9 @@
    </div>
 <!----------------------------------------------------------------------------------------------------------------------->
 <div class="col-md-12" >
-         <div class="col-sm-3 col-md-3.5" style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
+         <div style="padding-right: 5px; padding-left: 5px; margin-bottom: 20px;">
 <c:forEach var="kvo" items="${blist}" varStatus="status">  
-            <div class="thumbnail" style="margin-bottom: 5px; border: 1px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)"> 
+            <div class="thumbnail col-sm-3 col-md-3.5" style="margin-bottom: 5px; border: 0px solid #ddd" onmouseout="change2(this)" onmouseover="change1(this)"> 
                <a data-toggle="modal" data-target="#my[${status.index}]"><img src="${kvo.img}" alt="" style="height: 230px; width: 270px;" class="thumbna">
                	 <%-- <a href="detail.do?no=${vo.no }"><img src="<%=request.getContextPath()%>/shop/${vo.goods_image}" width=120 height=120>${vo.goods_name }(재고:${vo.goods_account }) --%>
                </a>
@@ -74,7 +74,7 @@
    <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
          style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px; ">
-         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">추천 도서</h3>
+         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">베스트 셀러</h3>
          <div class="top_title_r" style="padding-top: 0px;">
             
             <div class="btn-group" role="group">
