@@ -19,8 +19,15 @@ public class BoardVO {
 	private int board_like;
 	private String board_filename;
 	private String board_filesize;
+	private String title;
 	
 	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getBoard_filename() {
 		return board_filename;
 	}

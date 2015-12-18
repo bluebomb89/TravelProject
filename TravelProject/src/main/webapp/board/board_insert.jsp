@@ -98,7 +98,7 @@ function ImgUproad(step){
     <div>
 	    <div>
 	        <div class="cont_box">     
-      	      	<p class="travel_subject" style="margin-top: 50px">여행 제목</p>
+      	      	<p class="travel_subject" style="margin-top: 50px">책 제목</p>
 		      	<input type="text" name="board_sub" id="board_sub" class="subject_txt" placeholder="예) 소고기 미역국 끓이기" style="width:610px;position: absolute;">	
 	            <input type="file" name="board_mainimage" id="board_mainimage" class="travel_img_upload" style="margin-left: 800px;">
 	        </div>
@@ -106,7 +106,7 @@ function ImgUproad(step){
     </div><!-- 타이틀 -->
     
     <div class="cont_box">
-      <p class="travel_subject">여행 순서</p><br><br>
+      <p class="travel_subject">내용 순서</p><br><br>
       <div id="otv_conts">
 	      <div class="" id="otv_cont1">
 	            <p class="cont_left" style="cursor:pointer; float: left; font-size: 30px;">Step1</p>
@@ -114,7 +114,7 @@ function ImgUproad(step){
 	            	<input type="file" class="travel_cont_img cont_left" name="files['0']" id="files[1]">
 	            </div>		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont[0]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[0]" id="" class="" placeholder="예) 책 내용을 써주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
    	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(1)">
 		  </div>
@@ -122,7 +122,7 @@ function ImgUproad(step){
 	            <p class="cont_left img_cont" style="cursor:pointer; float: left; font-size: 30px;">Step2</p>
 	            <input type="file" class="travel_cont_img cont_left" name="files['1']" id="files[2]">		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont[1]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[1]" id="" class="" placeholder="예) 책 내용을 써주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
 	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(2)">
 		  </div>
@@ -130,13 +130,13 @@ function ImgUproad(step){
 	            <p class="cont_left img_cont" style="cursor:pointer; float: left; font-size: 30px;">Step3</p>
 	            <input type="file" class="travel_cont_img cont_left" name="files['2']" id="files[3]">		
 	            <div id="" class="cont_left" style="display:inline-block">
-	                <textarea name="tv_cont[2]" id="" class="" placeholder="예) 소고기는 기름기를 떼어내고 적당한 크기로 썰어주세요." style="height:160px; width:430px; resize:none;"></textarea>
+	                <textarea name="tv_cont[2]" id="" class="" placeholder="예) 책 내용을 써주세요." style="height:160px; width:430px; resize:none;"></textarea>
 	            </div>
 	            <img id="" class="cont_img" src="yoSeksa/css/recipe_enroll/pic_none4.gif" onclick="ImgUproad(3)">
 		  </div>
 	  </div>
           
-      여행 내용 목록
+       내용 목록
 
       <div style="margin-left: auto;margin-right: auto;">
       	<button type="button" id="tvl_btn" class="">

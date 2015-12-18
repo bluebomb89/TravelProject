@@ -17,6 +17,126 @@ function searchBtn(){
 }
 </script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '별점순'],
+          <c:forEach var="vo" items="${list}">
+           ['<c:out value="${vo.title}"/>',<c:out value="${vo.star}"/>],
+          </c:forEach>
+        ]);
+
+        var options = {
+          title: '책 별점순 차트',
+          //is3D:true,
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '베스트'],
+          <c:forEach var="vo" items="${list}">
+           ['<c:out value="${vo.title}"/>',<c:out value="${vo.star}"/>],
+          </c:forEach>
+        ]);
+
+        var options = {
+          title: '책 평점별 차트',
+          //is3D:true
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart2'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '베스트', '별점'],
+          <c:forEach var="vo" items="${list}">
+          ['<c:out value="${vo.title}"/>',  
+           <c:out value="${vo.review}"/>, 
+           <c:out value="${vo.star}"/>
+          ],
+          </c:forEach>          
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: '영화명',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart4'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['영화명',  '리뷰',  '별점'],
+        <c:forEach var="vo" items="${list}">
+        ['<c:out value="${vo.title}"/>',                  
+         <c:out value="${vo.review}"/>,       
+         <c:out value="${vo.star}"/>
+        ],
+        </c:forEach>
+      ]);
+
+      var options = {
+        title: '2014 책 통계',
+        hAxis: {title: '리'},
+        vAxis: {title: '별점'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart5'));
+      chart.draw(data, options);
+    }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["motionchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Movie');
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Reserve');
+        data.addColumn('number', 'Star');
+        data.addColumn('string', 'Location');
+        data.addRows([
+          ['내부자들',  new Date (2015,0,1), 1000, 300, 'CGV'],
+          ['도리화가', new Date (2015,0,1), 1150, 200, '메가박스'],
+          ['맥베드', new Date (2015,0,1), 300,  250, '롯데시네마'],
+          ['내부자들',  new Date (2015,6,1), 1200, 400, 'CGV'],
+          ['도리화가', new Date (2015,6,1), 750,  150, '메가박스'],
+          ['맥베드', new Date (2015,6,1), 788,  617, '롯데시네마']
+        ]);
+
+        var chart = new google.visualization.MotionChart(document.getElementById('chart7'));
+
+        chart.draw(data, {width: 900, height:500});
+      }
+    </script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -30,7 +150,7 @@ function searchBtn(){
         ]);
 
         var options = {
-          title: '책별 감성 차트',
+          title: '${title} 감성 차트',
           is3D:true,
           //pieHole: 0.4
         };
@@ -44,10 +164,10 @@ function searchBtn(){
 <div class="section">
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider-64" style="background-color: rgb(255, 255, 255);">
 	<div class="searchArea">
-		<div id="searchTxtArea" class="searchTxtArea">OTRAVEL.COM</div>
+		<div id="searchTxtArea" class="searchTxtArea">OBOOK.COM</div>
 		<fieldset>
 		<form method="post" action="travel_search.tvl" id="travel_search" name="travel_search">
-			<input type="text" placeholder="여행지를 입력하세요" id="searchText" title="검색어" class="placeholder" name="searchText">
+			<input type="text" placeholder="책을 입력하세요" id="searchText" title="검색어" class="placeholder" name="searchText">
 		</form>
 			<a onclick="searchBtn()" class="searchBtn"><img src="backgroundimg/main/btn_search.png" alt="검색"></a>
 		</fieldset>
@@ -119,23 +239,19 @@ function searchBtn(){
 </section>
 </div>
 <div class="section">
-<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="background-image: ;">
+<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="height: 1400px;">
     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center" style="position: absolute">   
-<div class=" col-sm-8 col-sm-offset-2">
 				  <div class=" col-sm-8 col-sm-offset-2">
                    <div id="chart3" style="width: 700px; height: 500px;"></div>
                 </div>
-</div>
-                <div style="height: 960px">
-                	 <div id="chart1" style="width: 300px; height: 280px;">11</div>
+                	 <div id="chart1" style="width: 300px; height: 280px; float: right;"></div>
                    <!-- <div id="chart2" style="width: 300px; height: 280px;"></div> -->
-                   <div id="chart2" style="width: 300px; height: 280px;">33</div>
-                   <div id="chart4" style="width: 300px; height: 280px;">44</div>
-                   <div id="chart5" style="width: 300px; height: 280px;">55</div>
-                   <div id="chart6" style="width: 300px; height: 280px;">66</div>
-                   <div id="chart7" style="width: 900px; height: 500px;"></div>
+                   <div id="chart2" style="width: 300px; height: 280px; float: right;"></div>
+                   <div id="chart4" style="width: 300px; height: 280px; float: right;"></div>
+                   <div id="chart5" style="width: 300px; height: 280px; float: right;"></div>
+                   <div id="chart6" style="width: 300px; height: 280px; float: right;">	</div>
+                   <div id="chart7" style="width: 900px; height: 500px; float: right; padding-left: 90px;"></div>
                 	</div>
-                </div>
             </section>
             </div>
 

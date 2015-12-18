@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.io.File;
 import java.util.*;
 @Controller
 public class SearchController {
@@ -24,9 +26,12 @@ public class SearchController {
 		System.out.println(searchText);
 		smr.movie_parse(searchText);
 		// R연동
-		 RConnection rc=new RConnection();
-    	 rc.setStringEncoding("utf8");
-    	 rc.voidEval("feel<-read.table(\"/home/sist/feel\")");
+		   File file=new File("/home/sist/bookfeel");
+		   String sfile="feel<-read.table(\"/home/sist/bookfeel\")";
+		   if(!file.exists()) sfile="feel<-read.table(\"/home/sist/feel\")";
+			 RConnection rc=new RConnection();
+	    	 rc.setStringEncoding("utf8");
+	    	 rc.voidEval(sfile);
     	 REXP p=rc.eval("feel$V1");
     	 String[] word=p.asStrings();
     	 p=rc.eval("feel$V2");
@@ -41,6 +46,7 @@ public class SearchController {
     		 w.setCount(count[i]);
     		 mList.add(w);
     	 }
+    	 model.addAttribute("title", searchText);
     	 model.addAttribute("mList", mList);
 		// 반디앤루니스 R통계
 		List<bandiVO> list=bmr.bandiAllData();
