@@ -67,5 +67,6 @@
    <hadoop:job-runner id="wordCountRunner"
     job-ref="wordCount"
     run-at-startup="false"
+    
    />
 </beans>

@@ -66,15 +66,12 @@ public class ReviewManager {
       }
       public void review_find(String title)  throws Exception
       {
-    	num=1;
     	File file=new File("/home/sist/book.txt");
-    	if(num==1)
-    	{
-    		file.delete();
-    		
-    	}
-    	if(!file.exists())
-    		file.createNewFile();
+    	file.delete();
+    	if(!file.exists()) file.createNewFile();
+    	File feelfile=new File("/home/sist/bookfeel.txt");
+    	if(feelfile.exists()) feelfile.delete();
+//    	if(!feelfile.exists()) feelfile.createNewFile();
     	for(int i=1;i<=20;i++)
   		{
   		  String json=readJson(title,i);// {channel:{}...}
@@ -86,7 +83,7 @@ public class ReviewManager {
       {
     				    StringBuffer sb=new StringBuffer();
     				
-    					URL url=new URL("https://apis.daum.net/search/blog?apikey=6727e27025118f69c9959544e4dd00cc&q="+URLEncoder.encode(ss,"UTF-8")+"&output=json&result=20&pageno="+page);
+    					URL url=new URL("https://apis.daum.net/search/blog?apikey=831c5b9b4706e1518525a679b373b1be&q="+URLEncoder.encode(ss,"UTF-8")+"&output=json&result=20&pageno="+page);
     					HttpURLConnection conn=(HttpURLConnection)url.openConnection();
     					
     					if(conn!=null)
@@ -135,7 +132,6 @@ public class ReviewManager {
 //    		    	System.out.println(data);
     		    	
     		    	File file=new File("/home/sist/book.txt");
-    		    	if(file.exists()) file.delete();
     		    	FileWriter fw=new FileWriter(file,true);
     		    	fw.write(data);
     		    	fw.close();

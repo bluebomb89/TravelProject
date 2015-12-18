@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html> 
 <script type="text/javascript">
 var sch;
@@ -115,6 +116,10 @@ function searchBtn(){
             </div>
         </div>
     </div>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <c:forEach var="vo" items="${vlist}" varStatus="status">
+    	${status.index}
+    </c:forEach>
 </section>
 </div>
 <div class="section">

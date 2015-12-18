@@ -26,47 +26,61 @@ public class SearchManager {
 		    	  list.clear();
 //		    	  System.out.println("title="+title);
 		    	  rm.review_find(title);//movie.txt
+		 		  File file=new File("/home/sist/bookfeel");
+		 		  if(file.exists()) file.delete();
 		    	  jobBefore();
 		  		  jobExecute();
+		  		  //Thread.sleep(100);
 		  		  jobAfter();
+		  		  
 		     }
-		     public void jobExecute()
+		     public void jobExecute() throws Exception
 		 	{
 		 		try
 		 		{
-		 			FileSystem dfs=FileSystem.get(conf);
-			 		if(dfs.exists(new Path("/output"))) dfs.delete(new Path("/output"), true);
-			 		System.out.println("asdfkajskldfjwelfjaosejfiowejf");
-		 			jRunner.call();
-		 			dfs.close();
-		 		}catch(Exception ex)
+		 			   
+		 			   //jRunner.setRunAtStartup(true);
+		 			   jRunner.call();
+		 		
+		 			
+		 		}catch(Exception ex)//File does not exist: /output/part-r-00000
 		 		{
 		 			System.out.println(ex.getMessage());
-		 		}
+		 		}finally {
+//		 			File does not exist: /output/part-r-00000
+		 			//jobAfter();
+		 			//jRunner.setRunAtStartup(false);
+		 			if(jRunner.isWaitForCompletion()==true)
+		 			{
+		 				jRunner.setKillJobAtShutdown(true);
+		 				jRunner.setRunAtStartup(true);
+		 			}
+				}
 		 	}
 		 	public void jobBefore()
 		 	{
 		 		try
 		 		{
 		 			 FileSystem dfs=FileSystem.get(conf);
-			 		 if(dfs.exists(new Path("/input"))) dfs.delete(new Path("/input"),true);
+		 			if(dfs.exists(new Path("/input"))) dfs.delete(new Path("/input"),true);
+		 			if(dfs.exists(new Path("/output"))) dfs.delete(new Path("/output"),true);
 		 			 dfs.copyFromLocalFile(new Path("/home/sist/book.txt"), new Path("/input/book.txt"));
-		 		     dfs.close();
+		 		    dfs.close();
 		 		    
 		 		}catch(Exception ex)
 		 		{
 		 			System.out.println(ex.getMessage());
 		 		}
 		 	}
-		 	public void jobAfter()
+		 	public void jobAfter() throws Exception
 		 	{
 		 		try
 		 		{
 		 			FileSystem dfs=FileSystem.get(conf);
-		 			File file=new File("/home/sist/bookfeel");
-		 			if(file.exists()) file.delete();
+		 			 System.out.println("1");
 		 			dfs.copyToLocalFile(new Path("/output/part-r-00000"), new Path("/home/sist/bookfeel"));
-		 		   dfs.close();
+		 		   //dfs.close();
+		 		   //jRunner.destroy();
 		 		}catch(Exception ex)
 		 		{
 		 			System.out.println(ex.getMessage());
