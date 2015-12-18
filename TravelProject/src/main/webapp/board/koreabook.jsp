@@ -23,7 +23,8 @@
    <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
          style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px; ">
-         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">추천 도서</h3>
+         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:520px; font-size:25pt;">추천 도서</h3>
+            	 	<hr style="width:1000px; margin-top:20px; margin-bottom:-20px; border:1pt solid">
          <div class="top_title_r" style="padding-top: 0px;">
             
             <div class="btn-group" role="group">
@@ -41,6 +42,7 @@
                </a>
                <div class="caption">
                   <h3>${kvo.cont}</h3>
+               <!-- 	 	<hr style="width:200px; margin-top:20px; margin-bottom:-20px; border:1pt solid"> -->
                </div>
             </div>
 			<%-- <div class="modal fade bs-example-modal-lg bs-example-modal-lg" id="my${vo.board_tno }" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -74,7 +76,9 @@
    <div class="container" style="margin-top: 60px; padding-top: 40px; width: 1250px;">
       <div class="top_title"
          style="padding-bottom: 11px; padding-top: 10px; border-top-width: 1px; width: 1200px; ">
-         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:540px;">베스트 셀러</h3>
+         <h3 style="margin-bottom: 0px; margin-top: 0px; width: 200px; margin-left:505px; font-size:25pt">베스트 셀러</h3>
+         <hr style="width:1000px; margin-top:20px; margin-bottom:-20px; border:1pt solid">
+         
          <div class="top_title_r" style="padding-top: 0px;">
             
             <div class="btn-group" role="group">
