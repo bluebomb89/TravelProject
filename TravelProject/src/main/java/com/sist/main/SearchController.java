@@ -26,7 +26,7 @@ public class SearchController {
 		// 반디앤루니스 R통계
 		List<bandiVO> list=bmr.bandiAllData();
 		System.out.println("리스트는!!"+list.size());
-		model.addAttribute("vlist", list);
+		model.addAttribute("list", list);
 		return "main";
 	}
 }

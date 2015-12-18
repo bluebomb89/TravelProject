@@ -21,6 +21,149 @@
   <link rel="stylesheet" href="css/main/gstyle.css">
   <link rel="stylesheet" href="css/main/mbr-additional.css" type="text/css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '별점순'],
+          <c:forEach var="vo" items="${list}">
+           ['<c:out value="${vo.title}"/>',<c:out value="${vo.star}"/>],
+          </c:forEach>
+        ]);
+
+        var options = {
+          title: '책 별점순 차트',
+          //is3D:true,
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '베스트'],
+          <c:forEach var="vo" items="${list}">
+           ['<c:out value="${vo.title}"/>',<c:out value="${vo.star}"/>],
+          </c:forEach>
+        ]);
+
+        var options = {
+          title: '영화찜별 차트',
+          //is3D:true
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart3'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['책제목', '베스트', '별점'],
+          <c:forEach var="vo" items="${list}">
+          ['<c:out value="${vo.title}"/>',  
+           <c:out value="${vo.review}"/>, 
+           <c:out value="${vo.star}"/>
+          ],
+          </c:forEach>          
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: '영화명',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart4'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['영화명',  '리뷰',  '별점'],
+        <c:forEach var="vo" items="${list}">
+        ['<c:out value="${vo.title}"/>',                  
+         <c:out value="${vo.review}"/>,       
+         <c:out value="${vo.star}"/>
+        ],
+        </c:forEach>
+      ]);
+
+      var options = {
+        title: '2015 영화 통계',
+        hAxis: {title: '예매율'},
+        vAxis: {title: '별점'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart5'));
+      chart.draw(data, options);
+    }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+  <c:forEach var="vo" items="${list}">                                               
+       ['<c:out value="${vo.title}"/>',    
+        <c:out value="${vo.review}"/>,              
+        <c:out value="${vo.star}"/>,       
+        <c:out value="${vo.most}"/>,
+        <c:out value="${vo.most}"/>],
+  </c:forEach>
+      ], true);
+
+    var options = {
+      legend:'none'
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById('chart6'));
+
+    chart.draw(data, options);
+  }
+    </script>
+        <script type="text/javascript">
+      google.load("visualization", "1", {packages:["motionchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Movie');
+        data.addColumn('date', 'Date');
+        data.addColumn('string', 'Star');
+        data.addColumn('string', 'Location');
+        data.addRows([
+          ['내부자들',  new Date (2015,0,1), 1000, 300, 'CGV'],
+          ['도리화가', new Date (2015,0,1), 1150, 200, '메가박스'],
+          ['맥베드', new Date (2015,0,1), 300,  250, '롯데시네마'],
+          ['내부자들',  new Date (2015,6,1), 1200, 400, 'CGV'],
+          ['도리화가', new Date (2015,6,1), 750,  150, '메가박스'],
+          ['맥베드', new Date (2015,6,1), 788,  617, '롯데시네마']
+        ]);
+
+        var chart = new google.visualization.MotionChart(document.getElementById('chart7'));
+
+        chart.draw(data, {width: 900, height:500});
+      }
+    </script>
 </head>
 
 <body>

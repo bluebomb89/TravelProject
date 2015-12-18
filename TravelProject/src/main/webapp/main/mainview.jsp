@@ -101,11 +101,18 @@ function searchBtn(){
         
         <div class="mbr-box__container mbr-section__container container">
             <div class="mbr-box mbr-box--stretched"><div class="mbr-box__magnet mbr-box__magnet--center-center">
-                <div class="row"><div class=" col-sm-8 col-sm-offset-2">
+                <div class="row">
+                <div class=" col-sm-8 col-sm-offset-2">
                     <div class="mbr-hero animated fadeInUp">
-                  
+                  		
                     </div>
-                   
+                   <div id="chart1" style="width: 300px; height: 280px;">11</div>
+                   <!-- <div id="chart2" style="width: 300px; height: 280px;"></div> -->
+                   <div id="chart3" style="width: 300px; height: 280px;">33</div>
+                   <div id="chart4" style="width: 300px; height: 280px;">44</div>
+                   <div id="chart5" style="width: 300px; height: 280px;">55</div>
+                   <div id="chart6" style="width: 300px; height: 280px;">66</div>
+                   <div id="chart7" style="width: 900px; height: 500px;"></div>
                 </div></div>
             </div></div>
         </div>
@@ -115,9 +122,6 @@ function searchBtn(){
             </div>
         </div>
     </div>
-    <c:forEach var="vo" items="${vlist}" varStatus="status">
-    	${status.index}
-    </c:forEach>
 </section>
 </div>
 <div class="section">

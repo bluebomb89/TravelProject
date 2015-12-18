@@ -14,14 +14,13 @@ public class bandiManager {
 		Elements title=document.select("div.prod_list_type > ul > li > dl.prod_info > dt > a");
 		Elements review=document.select("div.prod_list_type > ul > li > dl.prod_info > dd.txt_desc > a > em");
 		Elements star=document.select("div.prod_list_type > ul > li > dl.prod_info > dd.txt_desc > strong");
-		Elements best=document.select("div.prod_list_type > ul > li > dl.prod_info > dd.txt_ebook > span > a > strong");
+//		Elements best=document.select("div.prod_list_type > ul > li > dl.prod_info > dd.txt_ebook > span > a > strong");
 		System.out.println(title.size());
 		for(int i=0; i<title.size(); i++){
 			bandiVO vo=new bandiVO();
 			vo.setTitle(title.get(i).text());
 			vo.setReview(review.get(i).text().substring(1,2));
 			vo.setStar(star.get(i).text());
-			vo.setMost(best.get(i).text());
 			list.add(vo);
 		}
 		return list;
