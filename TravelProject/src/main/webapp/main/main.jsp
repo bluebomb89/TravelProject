@@ -62,7 +62,7 @@
           //is3D:true
         };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart3'));
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart2'));
 
         chart.draw(data, options);
       }

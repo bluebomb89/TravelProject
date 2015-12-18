@@ -16,7 +16,30 @@ function searchBtn(){
 	$('#travel_search').submit();
 }
 </script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
 
+        var data = google.visualization.arrayToDataTable([
+          ['감성', 'Count'],
+          <c:forEach var="vo" items="${mList}">
+           ['<c:out value="${vo.word}"/>',<c:out value="${vo.count}"/>],
+          </c:forEach>
+        ]);
+
+        var options = {
+          title: '책별 감성 차트',
+          is3D:true,
+          //pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+
+        chart.draw(data, options);
+      }
+    </script>
 <!-- 슬라이더 메인 -->
 <div class="section">
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider-64" style="background-color: rgb(255, 255, 255);">
@@ -97,7 +120,7 @@ function searchBtn(){
 </div>
 <div class="section">
 <section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background" id="header1-71" style="background-image: ;">
-    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center">
+    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center" style="position: absolute">
         
         <div class="mbr-box__container mbr-section__container container">
             <div class="mbr-box mbr-box--stretched"><div class="mbr-box__magnet mbr-box__magnet--center-center">
@@ -106,21 +129,21 @@ function searchBtn(){
                     <div class="mbr-hero animated fadeInUp">
                   		
                     </div>
-                   <div id="chart1" style="width: 300px; height: 280px;">11</div>
+                <div class="row"><div class=" col-sm-8 col-sm-offset-2">
+                   <div id="chart3" style="width: 700px; height: 500px;"></div>
+                </div></div>
+                	 <div id="chart1" style="width: 300px; height: 280px;">11</div>
                    <!-- <div id="chart2" style="width: 300px; height: 280px;"></div> -->
-                   <div id="chart3" style="width: 300px; height: 280px;">33</div>
+                   <div id="chart2" style="width: 300px; height: 280px;">33</div>
                    <div id="chart4" style="width: 300px; height: 280px;">44</div>
                    <div id="chart5" style="width: 300px; height: 280px;">55</div>
                    <div id="chart6" style="width: 300px; height: 280px;">66</div>
                    <div id="chart7" style="width: 900px; height: 500px;"></div>
+                
                 </div></div>
             </div></div>
         </div>
-        <div class="mbr-arrow mbr-arrow--floating text-center">
-            <div class="mbr-section__container container">
-                <a class="mbr-arrow__link" href="#next"><i class="glyphicon glyphicon-menu-down"></i></a>
-            </div>
-        </div>
+      
     </div>
 </section>
 </div>
