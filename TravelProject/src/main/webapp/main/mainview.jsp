@@ -116,7 +116,6 @@ function searchBtn(){
             </div>
         </div>
     </div>
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     <c:forEach var="vo" items="${vlist}" varStatus="status">
     	${status.index}
     </c:forEach>

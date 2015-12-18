@@ -38,7 +38,7 @@ public class SearchManager {
 		 	{
 		 		try
 		 		{
-		 			   
+//		 			   conf.addResource(new Path("hdfs:localhost:9000"));
 		 			   //jRunner.setRunAtStartup(true);
 		 			   jRunner.call();
 		 		
@@ -47,14 +47,6 @@ public class SearchManager {
 		 		{
 		 			System.out.println(ex.getMessage());
 		 		}finally {
-//		 			File does not exist: /output/part-r-00000
-		 			//jobAfter();
-		 			//jRunner.setRunAtStartup(false);
-		 			if(jRunner.isWaitForCompletion()==true)
-		 			{
-		 				jRunner.setKillJobAtShutdown(true);
-		 				jRunner.setRunAtStartup(true);
-		 			}
 				}
 		 	}
 		 	public void jobBefore()
